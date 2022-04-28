@@ -96,6 +96,7 @@
             this.btn_Library.TabIndex = 1;
             this.btn_Library.Text = "کتابخانه";
             this.btn_Library.UseVisualStyleBackColor = true;
+            this.btn_Library.Click += new System.EventHandler(this.btn_Library_Click);
             // 
             // btn_Members
             // 
@@ -106,6 +107,7 @@
             this.btn_Members.TabIndex = 1;
             this.btn_Members.Text = "اعضاء";
             this.btn_Members.UseVisualStyleBackColor = true;
+            this.btn_Members.Click += new System.EventHandler(this.btn_Members_Click);
             // 
             // btn_Personels
             // 
@@ -116,6 +118,7 @@
             this.btn_Personels.TabIndex = 1;
             this.btn_Personels.Text = "پرسنل";
             this.btn_Personels.UseVisualStyleBackColor = true;
+            this.btn_Personels.Click += new System.EventHandler(this.btn_Personels_Click);
             // 
             // lbl_TodayDate
             // 

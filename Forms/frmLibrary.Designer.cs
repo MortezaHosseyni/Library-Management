@@ -29,24 +29,24 @@
         private void InitializeComponent()
         {
             this.dgv_Books = new System.Windows.Forms.DataGridView();
-            this.pnl_SearchBook = new System.Windows.Forms.Panel();
-            this.lbl_NewBook = new System.Windows.Forms.Label();
-            this.pnl_NewBook = new System.Windows.Forms.Panel();
-            this.lbl_SearchBook = new System.Windows.Forms.Label();
-            this.txt_NewBookCode = new System.Windows.Forms.TextBox();
-            this.lbl_NewBookCode = new System.Windows.Forms.Label();
-            this.txt_NewBookName = new System.Windows.Forms.TextBox();
-            this.lbl_NewBookName = new System.Windows.Forms.Label();
-            this.btn_AddBook = new System.Windows.Forms.Button();
-            this.btn_Clear = new System.Windows.Forms.Button();
-            this.txt_SearchBookCode = new System.Windows.Forms.TextBox();
-            this.txt_SearchBookName = new System.Windows.Forms.TextBox();
-            this.lbl_SearchBookCode = new System.Windows.Forms.Label();
-            this.lbl_SearchBookName = new System.Windows.Forms.Label();
-            this.btn_Search = new System.Windows.Forms.Button();
             this.col_BookID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_BookCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_BookName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pnl_SearchBook = new System.Windows.Forms.Panel();
+            this.txt_SearchBookCode = new System.Windows.Forms.TextBox();
+            this.btn_Search = new System.Windows.Forms.Button();
+            this.txt_SearchBookName = new System.Windows.Forms.TextBox();
+            this.lbl_SearchBookName = new System.Windows.Forms.Label();
+            this.lbl_SearchBookCode = new System.Windows.Forms.Label();
+            this.lbl_NewBook = new System.Windows.Forms.Label();
+            this.pnl_NewBook = new System.Windows.Forms.Panel();
+            this.btn_Clear = new System.Windows.Forms.Button();
+            this.btn_AddBook = new System.Windows.Forms.Button();
+            this.lbl_NewBookName = new System.Windows.Forms.Label();
+            this.lbl_NewBookCode = new System.Windows.Forms.Label();
+            this.txt_NewBookName = new System.Windows.Forms.TextBox();
+            this.txt_NewBookCode = new System.Windows.Forms.TextBox();
+            this.lbl_SearchBook = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Books)).BeginInit();
             this.pnl_SearchBook.SuspendLayout();
             this.pnl_NewBook.SuspendLayout();
@@ -62,10 +62,28 @@
             this.col_BookCode,
             this.col_BookName});
             this.dgv_Books.Location = new System.Drawing.Point(283, 13);
-            this.dgv_Books.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgv_Books.Margin = new System.Windows.Forms.Padding(4);
             this.dgv_Books.Name = "dgv_Books";
             this.dgv_Books.Size = new System.Drawing.Size(300, 308);
             this.dgv_Books.TabIndex = 0;
+            // 
+            // col_BookID
+            // 
+            this.col_BookID.HeaderText = "BookID";
+            this.col_BookID.Name = "col_BookID";
+            this.col_BookID.Visible = false;
+            // 
+            // col_BookCode
+            // 
+            this.col_BookCode.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.col_BookCode.HeaderText = "کد کتاب";
+            this.col_BookCode.Name = "col_BookCode";
+            // 
+            // col_BookName
+            // 
+            this.col_BookName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.col_BookName.HeaderText = "نام کتاب";
+            this.col_BookName.Name = "col_BookName";
             // 
             // pnl_SearchBook
             // 
@@ -75,10 +93,51 @@
             this.pnl_SearchBook.Controls.Add(this.lbl_SearchBookName);
             this.pnl_SearchBook.Controls.Add(this.lbl_SearchBookCode);
             this.pnl_SearchBook.Location = new System.Drawing.Point(16, 196);
-            this.pnl_SearchBook.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnl_SearchBook.Margin = new System.Windows.Forms.Padding(4);
             this.pnl_SearchBook.Name = "pnl_SearchBook";
             this.pnl_SearchBook.Size = new System.Drawing.Size(259, 125);
             this.pnl_SearchBook.TabIndex = 1;
+            // 
+            // txt_SearchBookCode
+            // 
+            this.txt_SearchBookCode.Location = new System.Drawing.Point(19, 16);
+            this.txt_SearchBookCode.Name = "txt_SearchBookCode";
+            this.txt_SearchBookCode.Size = new System.Drawing.Size(182, 23);
+            this.txt_SearchBookCode.TabIndex = 5;
+            // 
+            // btn_Search
+            // 
+            this.btn_Search.Location = new System.Drawing.Point(19, 84);
+            this.btn_Search.Name = "btn_Search";
+            this.btn_Search.Size = new System.Drawing.Size(230, 27);
+            this.btn_Search.TabIndex = 7;
+            this.btn_Search.Text = "جستجو";
+            this.btn_Search.UseVisualStyleBackColor = true;
+            // 
+            // txt_SearchBookName
+            // 
+            this.txt_SearchBookName.Location = new System.Drawing.Point(19, 45);
+            this.txt_SearchBookName.Name = "txt_SearchBookName";
+            this.txt_SearchBookName.Size = new System.Drawing.Size(182, 23);
+            this.txt_SearchBookName.TabIndex = 6;
+            // 
+            // lbl_SearchBookName
+            // 
+            this.lbl_SearchBookName.AutoSize = true;
+            this.lbl_SearchBookName.Location = new System.Drawing.Point(207, 48);
+            this.lbl_SearchBookName.Name = "lbl_SearchBookName";
+            this.lbl_SearchBookName.Size = new System.Drawing.Size(45, 17);
+            this.lbl_SearchBookName.TabIndex = 1;
+            this.lbl_SearchBookName.Text = "نام کتاب";
+            // 
+            // lbl_SearchBookCode
+            // 
+            this.lbl_SearchBookCode.AutoSize = true;
+            this.lbl_SearchBookCode.Location = new System.Drawing.Point(207, 19);
+            this.lbl_SearchBookCode.Name = "lbl_SearchBookCode";
+            this.lbl_SearchBookCode.Size = new System.Drawing.Size(45, 17);
+            this.lbl_SearchBookCode.TabIndex = 1;
+            this.lbl_SearchBookCode.Text = "کد کتاب";
             // 
             // lbl_NewBook
             // 
@@ -105,23 +164,32 @@
             this.pnl_NewBook.Size = new System.Drawing.Size(259, 138);
             this.pnl_NewBook.TabIndex = 1;
             // 
-            // lbl_SearchBook
+            // btn_Clear
             // 
-            this.lbl_SearchBook.AutoSize = true;
-            this.lbl_SearchBook.ForeColor = System.Drawing.Color.Blue;
-            this.lbl_SearchBook.Location = new System.Drawing.Point(237, 175);
-            this.lbl_SearchBook.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lbl_SearchBook.Name = "lbl_SearchBook";
-            this.lbl_SearchBook.Size = new System.Drawing.Size(41, 17);
-            this.lbl_SearchBook.TabIndex = 0;
-            this.lbl_SearchBook.Text = "جستجو";
+            this.btn_Clear.Location = new System.Drawing.Point(19, 90);
+            this.btn_Clear.Name = "btn_Clear";
+            this.btn_Clear.Size = new System.Drawing.Size(116, 34);
+            this.btn_Clear.TabIndex = 4;
+            this.btn_Clear.Text = "انصراف";
+            this.btn_Clear.UseVisualStyleBackColor = true;
             // 
-            // txt_NewBookCode
+            // btn_AddBook
             // 
-            this.txt_NewBookCode.Location = new System.Drawing.Point(19, 23);
-            this.txt_NewBookCode.Name = "txt_NewBookCode";
-            this.txt_NewBookCode.Size = new System.Drawing.Size(182, 23);
-            this.txt_NewBookCode.TabIndex = 1;
+            this.btn_AddBook.Location = new System.Drawing.Point(141, 90);
+            this.btn_AddBook.Name = "btn_AddBook";
+            this.btn_AddBook.Size = new System.Drawing.Size(108, 34);
+            this.btn_AddBook.TabIndex = 3;
+            this.btn_AddBook.Text = "افزودن";
+            this.btn_AddBook.UseVisualStyleBackColor = true;
+            // 
+            // lbl_NewBookName
+            // 
+            this.lbl_NewBookName.AutoSize = true;
+            this.lbl_NewBookName.Location = new System.Drawing.Point(207, 55);
+            this.lbl_NewBookName.Name = "lbl_NewBookName";
+            this.lbl_NewBookName.Size = new System.Drawing.Size(45, 17);
+            this.lbl_NewBookName.TabIndex = 1;
+            this.lbl_NewBookName.Text = "نام کتاب";
             // 
             // lbl_NewBookCode
             // 
@@ -139,91 +207,23 @@
             this.txt_NewBookName.Size = new System.Drawing.Size(182, 23);
             this.txt_NewBookName.TabIndex = 2;
             // 
-            // lbl_NewBookName
+            // txt_NewBookCode
             // 
-            this.lbl_NewBookName.AutoSize = true;
-            this.lbl_NewBookName.Location = new System.Drawing.Point(207, 55);
-            this.lbl_NewBookName.Name = "lbl_NewBookName";
-            this.lbl_NewBookName.Size = new System.Drawing.Size(45, 17);
-            this.lbl_NewBookName.TabIndex = 1;
-            this.lbl_NewBookName.Text = "نام کتاب";
+            this.txt_NewBookCode.Location = new System.Drawing.Point(19, 23);
+            this.txt_NewBookCode.Name = "txt_NewBookCode";
+            this.txt_NewBookCode.Size = new System.Drawing.Size(182, 23);
+            this.txt_NewBookCode.TabIndex = 1;
             // 
-            // btn_AddBook
+            // lbl_SearchBook
             // 
-            this.btn_AddBook.Location = new System.Drawing.Point(141, 90);
-            this.btn_AddBook.Name = "btn_AddBook";
-            this.btn_AddBook.Size = new System.Drawing.Size(108, 34);
-            this.btn_AddBook.TabIndex = 3;
-            this.btn_AddBook.Text = "افزودن";
-            this.btn_AddBook.UseVisualStyleBackColor = true;
-            // 
-            // btn_Clear
-            // 
-            this.btn_Clear.Location = new System.Drawing.Point(19, 90);
-            this.btn_Clear.Name = "btn_Clear";
-            this.btn_Clear.Size = new System.Drawing.Size(116, 34);
-            this.btn_Clear.TabIndex = 4;
-            this.btn_Clear.Text = "انصراف";
-            this.btn_Clear.UseVisualStyleBackColor = true;
-            // 
-            // txt_SearchBookCode
-            // 
-            this.txt_SearchBookCode.Location = new System.Drawing.Point(19, 16);
-            this.txt_SearchBookCode.Name = "txt_SearchBookCode";
-            this.txt_SearchBookCode.Size = new System.Drawing.Size(182, 23);
-            this.txt_SearchBookCode.TabIndex = 5;
-            // 
-            // txt_SearchBookName
-            // 
-            this.txt_SearchBookName.Location = new System.Drawing.Point(19, 45);
-            this.txt_SearchBookName.Name = "txt_SearchBookName";
-            this.txt_SearchBookName.Size = new System.Drawing.Size(182, 23);
-            this.txt_SearchBookName.TabIndex = 6;
-            // 
-            // lbl_SearchBookCode
-            // 
-            this.lbl_SearchBookCode.AutoSize = true;
-            this.lbl_SearchBookCode.Location = new System.Drawing.Point(207, 19);
-            this.lbl_SearchBookCode.Name = "lbl_SearchBookCode";
-            this.lbl_SearchBookCode.Size = new System.Drawing.Size(45, 17);
-            this.lbl_SearchBookCode.TabIndex = 1;
-            this.lbl_SearchBookCode.Text = "کد کتاب";
-            // 
-            // lbl_SearchBookName
-            // 
-            this.lbl_SearchBookName.AutoSize = true;
-            this.lbl_SearchBookName.Location = new System.Drawing.Point(207, 48);
-            this.lbl_SearchBookName.Name = "lbl_SearchBookName";
-            this.lbl_SearchBookName.Size = new System.Drawing.Size(45, 17);
-            this.lbl_SearchBookName.TabIndex = 1;
-            this.lbl_SearchBookName.Text = "نام کتاب";
-            // 
-            // btn_Search
-            // 
-            this.btn_Search.Location = new System.Drawing.Point(19, 84);
-            this.btn_Search.Name = "btn_Search";
-            this.btn_Search.Size = new System.Drawing.Size(230, 27);
-            this.btn_Search.TabIndex = 7;
-            this.btn_Search.Text = "جستجو";
-            this.btn_Search.UseVisualStyleBackColor = true;
-            // 
-            // col_BookID
-            // 
-            this.col_BookID.HeaderText = "BookID";
-            this.col_BookID.Name = "col_BookID";
-            this.col_BookID.Visible = false;
-            // 
-            // col_BookCode
-            // 
-            this.col_BookCode.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.col_BookCode.HeaderText = "کد کتاب";
-            this.col_BookCode.Name = "col_BookCode";
-            // 
-            // col_BookName
-            // 
-            this.col_BookName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.col_BookName.HeaderText = "نام کتاب";
-            this.col_BookName.Name = "col_BookName";
+            this.lbl_SearchBook.AutoSize = true;
+            this.lbl_SearchBook.ForeColor = System.Drawing.Color.Blue;
+            this.lbl_SearchBook.Location = new System.Drawing.Point(237, 175);
+            this.lbl_SearchBook.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_SearchBook.Name = "lbl_SearchBook";
+            this.lbl_SearchBook.Size = new System.Drawing.Size(41, 17);
+            this.lbl_SearchBook.TabIndex = 0;
+            this.lbl_SearchBook.Text = "جستجو";
             // 
             // frmLibrary
             // 
@@ -236,12 +236,13 @@
             this.Controls.Add(this.pnl_SearchBook);
             this.Controls.Add(this.dgv_Books);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(612, 373);
             this.MinimumSize = new System.Drawing.Size(612, 373);
             this.Name = "frmLibrary";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "کتابخانه";
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Books)).EndInit();
             this.pnl_SearchBook.ResumeLayout(false);
