@@ -333,6 +333,8 @@
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(714, 519);
+            this.MinimumSize = new System.Drawing.Size(714, 519);
             this.Name = "frmMembers";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
