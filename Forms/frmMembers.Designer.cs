@@ -340,8 +340,7 @@
             this.contextMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsm_DeleteMember});
             this.contextMenuStrip.Name = "contextMenuStrip";
-            this.contextMenuStrip.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.contextMenuStrip.Size = new System.Drawing.Size(153, 48);
+            this.contextMenuStrip.Size = new System.Drawing.Size(128, 26);
             // 
             // tsm_DeleteMember
             // 
