@@ -67,19 +67,17 @@ namespace libraryManagement.Forms
                         fm.Show();
                         this.Hide();
 
-                        break;
-                    }
-                    else
-                    {
-                        MessageBox.Show("اطلاعات وارد شده معتبر نيست", "خطاي ورود");
+                        return;
                     }
                 }
 
+                MessageBox.Show("پرسنلی با این مشخصات وجود ندارد", "خطا در دریافت اطلاعات");
                 conn.Close();
             }
             catch (Exception)
             {
                 MessageBox.Show("هنگام اتصال به سرور خطايي رخ داد", "پايگاه داده");
+                return;
             }
         }
     }

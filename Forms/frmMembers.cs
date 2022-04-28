@@ -62,7 +62,7 @@ namespace libraryManagement.Forms
             {
                 SQLiteConnection sqlite_conn;
                 sqlite_conn = db.CreateConnection();
-                DeleteBook(sqlite_conn, memID);
+                DeleteMember(sqlite_conn, memID);
             }
         }
 
@@ -152,7 +152,7 @@ namespace libraryManagement.Forms
             }
         }
 
-        public void DeleteBook(SQLiteConnection conn, int memberID)
+        public void DeleteMember(SQLiteConnection conn, int memberID)
         {
             try
             {

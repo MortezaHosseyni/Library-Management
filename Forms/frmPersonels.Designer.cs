@@ -85,6 +85,7 @@
             this.col_LastName,
             this.col_BrithDate,
             this.col_Username});
+            this.dgv_Personels.ContextMenuStrip = this.contextMenuStrip;
             this.dgv_Personels.Location = new System.Drawing.Point(12, 12);
             this.dgv_Personels.Name = "dgv_Personels";
             this.dgv_Personels.Size = new System.Drawing.Size(781, 258);

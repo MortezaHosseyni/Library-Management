@@ -27,22 +27,43 @@ namespace libraryManagement.Forms
 
         private void btn_AddNewPersonel_Click(object sender, EventArgs e)
         {
+            if (txt_NewPersonelNCode.Text.Trim() == "" || txt_NewPersonelFirstName.Text.Trim() == "" || txt_NewPersonelLastName.Text.Trim() == "" || txt_NewPersonelBrithDate.Text.Trim() == "" || txt_NewPersonelUserName.Text.Trim() == "" || txt_NewPersonelPassword.Text.Trim() == "")
+            {
+                MessageBox.Show("لطفا فیلدهای خالی را بررسی کنید", "فیلد خالی");
+                return;
+            }
+            else
+            {
+                SQLiteConnection sqlite_conn;
+                sqlite_conn = db.CreateConnection();
+                InsertData(sqlite_conn, txt_NewPersonelNCode.Text.Trim(), txt_NewPersonelFirstName.Text.Trim(), txt_NewPersonelLastName.Text.Trim(), txt_NewPersonelBrithDate.Text.Trim(), txt_NewPersonelUserName.Text.Trim(), txt_NewPersonelPassword.Text.Trim());
 
+                read();
+                clear();
+            }
         }
 
         private void btn_Search_Click(object sender, EventArgs e)
         {
-
+            readSearch($"PR_NCode LIKE '%{txt_SearchPersonelNCode.Text.Trim()}%' AND PR_FirstName LIKE '%{txt_SearchPersonelFirstName.Text.Trim()}%' AND PR_LastName LIKE '%{txt_SearchPersonelLastName.Text.Trim()}%' AND PR_BrithDate LIKE '%{txt_SearchPersonelBrithDate.Text.Trim()}%' AND PR_Username LIKE '%{txt_SearchPersonelUsername.Text.Trim()}%'");
         }
 
         private void btn_Clear_Click(object sender, EventArgs e)
         {
-
+            clear();
         }
 
         private void tsm_DeletePersonel_Click(object sender, EventArgs e)
         {
+            int memID = Convert.ToInt32(dgv_Personels.CurrentRow.Cells["col_PersonelID"].Value);
+            string memName = dgv_Personels.CurrentRow.Cells["col_FirstName"].Value.ToString() + " " + dgv_Personels.CurrentRow.Cells["col_LastName"].Value.ToString();
 
+            if (MessageBox.Show($"آیا از حذف {memName} مطمعن هستید؟", "حذف عضو", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                SQLiteConnection sqlite_conn;
+                sqlite_conn = db.CreateConnection();
+                DeletePersonel(sqlite_conn, memID);
+            }
         }
 
 
@@ -118,16 +139,16 @@ namespace libraryManagement.Forms
             conn.Close();
         }
 
-        public void InsertData(SQLiteConnection conn, string memNCode, string memFirstName, string memLastName, string memBrithDate)
+        public void InsertData(SQLiteConnection conn, string perNCode, string perFirstName, string perLastName, string perBrithDate, string perUsername, string perPassword)
         {
             try
             {
                 SQLiteCommand sqlite_cmd;
                 sqlite_cmd = conn.CreateCommand();
-                sqlite_cmd.CommandText = $"INSERT INTO TB_Members (MM_NCode, MM_FirstName, MM_LastName, MM_BrithDate) VALUES('{memNCode}', '{memFirstName}', '{memLastName}', '{memBrithDate}'); ";
+                sqlite_cmd.CommandText = $"INSERT INTO TB_Personels (PR_NCode, PR_FirstName, PR_LastName, PR_BrithDate, PR_Username, PR_Password) VALUES('{perNCode}', '{perFirstName}', '{perLastName}', '{perBrithDate}', '{perUsername}', {perPassword}); ";
                 sqlite_cmd.ExecuteNonQuery();
 
-                MessageBox.Show("عضو جدید با موفقیت ثبت شد", "پایگاه داده");
+                MessageBox.Show("پرسنل جدید با موفقیت ثبت شد", "پایگاه داده");
                 return;
             }
             catch (Exception)
@@ -137,7 +158,7 @@ namespace libraryManagement.Forms
             }
         }
 
-        public void DeleteBook(SQLiteConnection conn, int memberID)
+        public void DeletePersonel(SQLiteConnection conn, int personelID)
         {
             try
             {
@@ -145,7 +166,7 @@ namespace libraryManagement.Forms
                 SQLiteCommand sqlite_cmd;
 
                 sqlite_cmd = conn.CreateCommand();
-                sqlite_cmd.CommandText = $"DELETE FROM TB_Members WHERE MM_ID = {memberID}";
+                sqlite_cmd.CommandText = $"DELETE FROM TB_Personels WHERE PR_ID = {personelID}";
                 sqlite_datareader = sqlite_cmd.ExecuteReader();
 
                 read();
