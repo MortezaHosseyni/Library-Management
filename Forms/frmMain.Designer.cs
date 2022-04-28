@@ -28,11 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.mns_TopMenu = new System.Windows.Forms.MenuStrip();
-            this.برنامهToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.دربارهماToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.تنظیماتToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.خروجToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsm_Program = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsm_About = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsm_Setting = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsm_Exit = new System.Windows.Forms.ToolStripMenuItem();
             this.btn_Library = new System.Windows.Forms.Button();
             this.btn_Members = new System.Windows.Forms.Button();
             this.btn_Personels = new System.Windows.Forms.Button();
@@ -42,13 +43,14 @@
             this.val_Time = new System.Windows.Forms.Label();
             this.lbl_User = new System.Windows.Forms.Label();
             this.val_User = new System.Windows.Forms.Label();
+            this.timer = new System.Windows.Forms.Timer(this.components);
             this.mns_TopMenu.SuspendLayout();
             this.SuspendLayout();
             // 
             // mns_TopMenu
             // 
             this.mns_TopMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.برنامهToolStripMenuItem});
+            this.tsm_Program});
             this.mns_TopMenu.Location = new System.Drawing.Point(0, 0);
             this.mns_TopMenu.Name = "mns_TopMenu";
             this.mns_TopMenu.Padding = new System.Windows.Forms.Padding(8, 3, 0, 3);
@@ -56,33 +58,34 @@
             this.mns_TopMenu.TabIndex = 0;
             this.mns_TopMenu.Text = "menuStrip1";
             // 
-            // برنامهToolStripMenuItem
+            // tsm_Program
             // 
-            this.برنامهToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.دربارهماToolStripMenuItem,
-            this.تنظیماتToolStripMenuItem,
-            this.خروجToolStripMenuItem});
-            this.برنامهToolStripMenuItem.Name = "برنامهToolStripMenuItem";
-            this.برنامهToolStripMenuItem.Size = new System.Drawing.Size(47, 19);
-            this.برنامهToolStripMenuItem.Text = "برنامه";
+            this.tsm_Program.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsm_About,
+            this.tsm_Setting,
+            this.tsm_Exit});
+            this.tsm_Program.Name = "tsm_Program";
+            this.tsm_Program.Size = new System.Drawing.Size(47, 19);
+            this.tsm_Program.Text = "برنامه";
             // 
-            // دربارهماToolStripMenuItem
+            // tsm_About
             // 
-            this.دربارهماToolStripMenuItem.Name = "دربارهماToolStripMenuItem";
-            this.دربارهماToolStripMenuItem.Size = new System.Drawing.Size(117, 22);
-            this.دربارهماToolStripMenuItem.Text = "درباره ما";
+            this.tsm_About.Name = "tsm_About";
+            this.tsm_About.Size = new System.Drawing.Size(152, 22);
+            this.tsm_About.Text = "درباره ما";
             // 
-            // تنظیماتToolStripMenuItem
+            // tsm_Setting
             // 
-            this.تنظیماتToolStripMenuItem.Name = "تنظیماتToolStripMenuItem";
-            this.تنظیماتToolStripMenuItem.Size = new System.Drawing.Size(117, 22);
-            this.تنظیماتToolStripMenuItem.Text = "تنظیمات";
+            this.tsm_Setting.Name = "tsm_Setting";
+            this.tsm_Setting.Size = new System.Drawing.Size(152, 22);
+            this.tsm_Setting.Text = "تنظیمات";
             // 
-            // خروجToolStripMenuItem
+            // tsm_Exit
             // 
-            this.خروجToolStripMenuItem.Name = "خروجToolStripMenuItem";
-            this.خروجToolStripMenuItem.Size = new System.Drawing.Size(117, 22);
-            this.خروجToolStripMenuItem.Text = "خروج";
+            this.tsm_Exit.Name = "tsm_Exit";
+            this.tsm_Exit.Size = new System.Drawing.Size(152, 22);
+            this.tsm_Exit.Text = "خروج";
+            this.tsm_Exit.Click += new System.EventHandler(this.tsm_Exit_Click);
             // 
             // btn_Library
             // 
@@ -174,6 +177,11 @@
             this.val_User.TabIndex = 2;
             this.val_User.Text = "نام و نام خانوادگی ادمین  وارد شده";
             // 
+            // timer
+            // 
+            this.timer.Enabled = true;
+            this.timer.Tick += new System.EventHandler(this.timer_Tick);
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
@@ -197,6 +205,7 @@
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "مدیریت کتابخانه";
+            this.Load += new System.EventHandler(this.frmMain_Load);
             this.mns_TopMenu.ResumeLayout(false);
             this.mns_TopMenu.PerformLayout();
             this.ResumeLayout(false);
@@ -207,10 +216,10 @@
         #endregion
 
         private System.Windows.Forms.MenuStrip mns_TopMenu;
-        private System.Windows.Forms.ToolStripMenuItem برنامهToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem دربارهماToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem تنظیماتToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem خروجToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem tsm_Program;
+        private System.Windows.Forms.ToolStripMenuItem tsm_About;
+        private System.Windows.Forms.ToolStripMenuItem tsm_Setting;
+        private System.Windows.Forms.ToolStripMenuItem tsm_Exit;
         private System.Windows.Forms.Button btn_Library;
         private System.Windows.Forms.Button btn_Members;
         private System.Windows.Forms.Button btn_Personels;
@@ -220,6 +229,7 @@
         private System.Windows.Forms.Label val_Time;
         private System.Windows.Forms.Label lbl_User;
         private System.Windows.Forms.Label val_User;
+        private System.Windows.Forms.Timer timer;
     }
 }
 
