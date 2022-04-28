@@ -26,7 +26,8 @@ namespace libraryManagement
 
         private void frmMain_Load(object sender, EventArgs e)
         {
-            val_TodayDate.Text = pCal.GetYear(DateTime.Now) + "/" + pCal.GetMonth(DateTime.Now) + "/" + pCal.GetDayOfMonth(DateTime.Now);
+            string d = pCal.GetYear(DateTime.Now) + "/" + pCal.GetMonth(DateTime.Now) + "/" + pCal.GetDayOfMonth(DateTime.Now);
+            val_TodayDate.Text = string.Format("{0:yyyy/MM/dd}", Convert.ToDateTime(d));
         }
 
         private void timer_Tick(object sender, EventArgs e)
