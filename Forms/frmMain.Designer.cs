@@ -73,6 +73,7 @@
             this.tsm_About.Name = "tsm_About";
             this.tsm_About.Size = new System.Drawing.Size(152, 22);
             this.tsm_About.Text = "درباره ما";
+            this.tsm_About.Click += new System.EventHandler(this.tsm_About_Click);
             // 
             // tsm_Setting
             // 

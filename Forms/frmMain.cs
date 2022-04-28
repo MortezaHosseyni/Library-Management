@@ -57,5 +57,10 @@ namespace libraryManagement
             frmPersonels fmP = new frmPersonels();
             fmP.ShowDialog();
         }
+
+        private void tsm_About_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("برنامه نویس: مرتضی حسینی \nایمیل: Morteza_Hoseyni81@Yahoo.Com", "درباره ما", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+        }
     }
 }
