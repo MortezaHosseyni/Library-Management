@@ -65,8 +65,8 @@
             this.tsm_Setting,
             this.tsm_Exit});
             this.tsm_Program.Name = "tsm_Program";
-            this.tsm_Program.Size = new System.Drawing.Size(47, 19);
-            this.tsm_Program.Text = "برنامه";
+            this.tsm_Program.Size = new System.Drawing.Size(56, 19);
+            this.tsm_Program.Text = "کتابخانه";
             // 
             // tsm_About
             // 
@@ -89,7 +89,7 @@
             // 
             // btn_Library
             // 
-            this.btn_Library.Location = new System.Drawing.Point(463, 29);
+            this.btn_Library.Location = new System.Drawing.Point(466, 58);
             this.btn_Library.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Library.Name = "btn_Library";
             this.btn_Library.Size = new System.Drawing.Size(217, 62);
@@ -99,7 +99,7 @@
             // 
             // btn_Members
             // 
-            this.btn_Members.Location = new System.Drawing.Point(238, 29);
+            this.btn_Members.Location = new System.Drawing.Point(241, 58);
             this.btn_Members.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Members.Name = "btn_Members";
             this.btn_Members.Size = new System.Drawing.Size(217, 62);
@@ -109,7 +109,7 @@
             // 
             // btn_Personels
             // 
-            this.btn_Personels.Location = new System.Drawing.Point(13, 29);
+            this.btn_Personels.Location = new System.Drawing.Point(16, 58);
             this.btn_Personels.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Personels.Name = "btn_Personels";
             this.btn_Personels.Size = new System.Drawing.Size(217, 62);

@@ -9,7 +9,7 @@ namespace libraryManagement.DB
 {
     class ConnectToDB
     {
-        static SQLiteConnection CreateConnection()
+        public SQLiteConnection CreateConnection()
         {
             SQLiteConnection sqlite_conn;
             // Create a new database connection:
