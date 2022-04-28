@@ -31,28 +31,29 @@
             this.components = new System.ComponentModel.Container();
             this.dgv_Members = new System.Windows.Forms.DataGridView();
             this.pnl_NewMember = new System.Windows.Forms.Panel();
+            this.btn_Clear = new System.Windows.Forms.Button();
+            this.btn_AddNewMember = new System.Windows.Forms.Button();
+            this.txt_NewMemberBrithDate = new BPersianCalender.BPersianCalenderTextBox();
+            this.txt_NewMemberLastName = new System.Windows.Forms.TextBox();
+            this.txt_NewMemberFirstName = new System.Windows.Forms.TextBox();
+            this.txt_NewMemberNCode = new System.Windows.Forms.TextBox();
+            this.lbl_NewMemberNCode = new System.Windows.Forms.Label();
+            this.lbl_NewMemberBrithDate = new System.Windows.Forms.Label();
+            this.lbl_NewMemberLastName = new System.Windows.Forms.Label();
+            this.lbl_NewMemberFirstName = new System.Windows.Forms.Label();
             this.pnl_SearchMember = new System.Windows.Forms.Panel();
+            this.txt_SearchMemberNCode = new System.Windows.Forms.TextBox();
+            this.btn_Search = new System.Windows.Forms.Button();
+            this.lbl_SearchMemberFirstName = new System.Windows.Forms.Label();
+            this.txt_SearchMemberBrithDate = new BPersianCalender.BPersianCalenderTextBox();
+            this.lbl_SearchMemberLastName = new System.Windows.Forms.Label();
+            this.txt_SearchMemberLastName = new System.Windows.Forms.TextBox();
+            this.lbl_SearchMemberBrithDate = new System.Windows.Forms.Label();
+            this.txt_SearchMemberFirstName = new System.Windows.Forms.TextBox();
+            this.lbl_SearchMemberNCode = new System.Windows.Forms.Label();
             this.lbl_NewMember = new System.Windows.Forms.Label();
             this.lbl_SearchMember = new System.Windows.Forms.Label();
-            this.lbl_NewMemberFirstName = new System.Windows.Forms.Label();
-            this.lbl_NewMemberNCode = new System.Windows.Forms.Label();
-            this.lbl_NewMemberLastName = new System.Windows.Forms.Label();
-            this.lbl_NewMemberBrithDate = new System.Windows.Forms.Label();
-            this.txt_NewMemberNCode = new System.Windows.Forms.TextBox();
-            this.txt_NewMemberFirstName = new System.Windows.Forms.TextBox();
-            this.txt_NewMemberLastName = new System.Windows.Forms.TextBox();
-            this.txt_NewMemberBrithDate = new BPersianCalender.BPersianCalenderTextBox();
-            this.btn_AddNewMember = new System.Windows.Forms.Button();
-            this.btn_Clear = new System.Windows.Forms.Button();
-            this.lbl_SearchMemberFirstName = new System.Windows.Forms.Label();
-            this.lbl_SearchMemberLastName = new System.Windows.Forms.Label();
-            this.lbl_SearchMemberBrithDate = new System.Windows.Forms.Label();
-            this.lbl_SearchMemberNCode = new System.Windows.Forms.Label();
-            this.txt_SearchMemberNCode = new System.Windows.Forms.TextBox();
-            this.txt_SearchMemberFirstName = new System.Windows.Forms.TextBox();
-            this.txt_SearchMemberLastName = new System.Windows.Forms.TextBox();
-            this.txt_SearchMemberBrithDate = new BPersianCalender.BPersianCalenderTextBox();
-            this.btn_Search = new System.Windows.Forms.Button();
+            this.col_MemberID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_NCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_FirstName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_LastName = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -68,12 +69,13 @@
             this.dgv_Members.AllowUserToDeleteRows = false;
             this.dgv_Members.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_Members.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.col_MemberID,
             this.col_NCode,
             this.col_FirstName,
             this.col_LastName,
             this.col_BrithDate});
             this.dgv_Members.Location = new System.Drawing.Point(16, 15);
-            this.dgv_Members.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgv_Members.Margin = new System.Windows.Forms.Padding(4);
             this.dgv_Members.Name = "dgv_Members";
             this.dgv_Members.Size = new System.Drawing.Size(669, 233);
             this.dgv_Members.TabIndex = 0;
@@ -95,6 +97,95 @@
             this.pnl_NewMember.Size = new System.Drawing.Size(323, 196);
             this.pnl_NewMember.TabIndex = 1;
             // 
+            // btn_Clear
+            // 
+            this.btn_Clear.Location = new System.Drawing.Point(38, 158);
+            this.btn_Clear.Name = "btn_Clear";
+            this.btn_Clear.Size = new System.Drawing.Size(255, 27);
+            this.btn_Clear.TabIndex = 6;
+            this.btn_Clear.Text = "انصراف";
+            this.btn_Clear.UseVisualStyleBackColor = true;
+            this.btn_Clear.Click += new System.EventHandler(this.btn_Clear_Click);
+            // 
+            // btn_AddNewMember
+            // 
+            this.btn_AddNewMember.Location = new System.Drawing.Point(38, 125);
+            this.btn_AddNewMember.Name = "btn_AddNewMember";
+            this.btn_AddNewMember.Size = new System.Drawing.Size(255, 27);
+            this.btn_AddNewMember.TabIndex = 5;
+            this.btn_AddNewMember.Text = "افزودن";
+            this.btn_AddNewMember.UseVisualStyleBackColor = true;
+            this.btn_AddNewMember.Click += new System.EventHandler(this.btn_AddNewMember_Click);
+            // 
+            // txt_NewMemberBrithDate
+            // 
+            this.txt_NewMemberBrithDate.Location = new System.Drawing.Point(38, 96);
+            this.txt_NewMemberBrithDate.Miladi = new System.DateTime(((long)(0)));
+            this.txt_NewMemberBrithDate.Name = "txt_NewMemberBrithDate";
+            this.txt_NewMemberBrithDate.NowDateSelected = false;
+            this.txt_NewMemberBrithDate.ReadOnly = true;
+            this.txt_NewMemberBrithDate.SelectedDate = null;
+            this.txt_NewMemberBrithDate.Shamsi = null;
+            this.txt_NewMemberBrithDate.Size = new System.Drawing.Size(186, 23);
+            this.txt_NewMemberBrithDate.TabIndex = 4;
+            // 
+            // txt_NewMemberLastName
+            // 
+            this.txt_NewMemberLastName.Location = new System.Drawing.Point(38, 67);
+            this.txt_NewMemberLastName.Name = "txt_NewMemberLastName";
+            this.txt_NewMemberLastName.Size = new System.Drawing.Size(186, 23);
+            this.txt_NewMemberLastName.TabIndex = 3;
+            // 
+            // txt_NewMemberFirstName
+            // 
+            this.txt_NewMemberFirstName.Location = new System.Drawing.Point(38, 38);
+            this.txt_NewMemberFirstName.Name = "txt_NewMemberFirstName";
+            this.txt_NewMemberFirstName.Size = new System.Drawing.Size(186, 23);
+            this.txt_NewMemberFirstName.TabIndex = 2;
+            // 
+            // txt_NewMemberNCode
+            // 
+            this.txt_NewMemberNCode.Location = new System.Drawing.Point(38, 9);
+            this.txt_NewMemberNCode.Name = "txt_NewMemberNCode";
+            this.txt_NewMemberNCode.Size = new System.Drawing.Size(186, 23);
+            this.txt_NewMemberNCode.TabIndex = 1;
+            // 
+            // lbl_NewMemberNCode
+            // 
+            this.lbl_NewMemberNCode.AutoSize = true;
+            this.lbl_NewMemberNCode.Location = new System.Drawing.Point(231, 12);
+            this.lbl_NewMemberNCode.Name = "lbl_NewMemberNCode";
+            this.lbl_NewMemberNCode.Size = new System.Drawing.Size(35, 17);
+            this.lbl_NewMemberNCode.TabIndex = 0;
+            this.lbl_NewMemberNCode.Text = "کدملی";
+            // 
+            // lbl_NewMemberBrithDate
+            // 
+            this.lbl_NewMemberBrithDate.AutoSize = true;
+            this.lbl_NewMemberBrithDate.Location = new System.Drawing.Point(231, 99);
+            this.lbl_NewMemberBrithDate.Name = "lbl_NewMemberBrithDate";
+            this.lbl_NewMemberBrithDate.Size = new System.Drawing.Size(53, 17);
+            this.lbl_NewMemberBrithDate.TabIndex = 0;
+            this.lbl_NewMemberBrithDate.Text = "تاریخ تولد";
+            // 
+            // lbl_NewMemberLastName
+            // 
+            this.lbl_NewMemberLastName.AutoSize = true;
+            this.lbl_NewMemberLastName.Location = new System.Drawing.Point(231, 70);
+            this.lbl_NewMemberLastName.Name = "lbl_NewMemberLastName";
+            this.lbl_NewMemberLastName.Size = new System.Drawing.Size(65, 17);
+            this.lbl_NewMemberLastName.TabIndex = 0;
+            this.lbl_NewMemberLastName.Text = "نام خانوادگی";
+            // 
+            // lbl_NewMemberFirstName
+            // 
+            this.lbl_NewMemberFirstName.AutoSize = true;
+            this.lbl_NewMemberFirstName.Location = new System.Drawing.Point(231, 41);
+            this.lbl_NewMemberFirstName.Name = "lbl_NewMemberFirstName";
+            this.lbl_NewMemberFirstName.Size = new System.Drawing.Size(19, 17);
+            this.lbl_NewMemberFirstName.TabIndex = 0;
+            this.lbl_NewMemberFirstName.Text = "نام";
+            // 
             // pnl_SearchMember
             // 
             this.pnl_SearchMember.Controls.Add(this.txt_SearchMemberNCode);
@@ -110,6 +201,85 @@
             this.pnl_SearchMember.Name = "pnl_SearchMember";
             this.pnl_SearchMember.Size = new System.Drawing.Size(340, 196);
             this.pnl_SearchMember.TabIndex = 1;
+            // 
+            // txt_SearchMemberNCode
+            // 
+            this.txt_SearchMemberNCode.Location = new System.Drawing.Point(51, 12);
+            this.txt_SearchMemberNCode.Name = "txt_SearchMemberNCode";
+            this.txt_SearchMemberNCode.Size = new System.Drawing.Size(186, 23);
+            this.txt_SearchMemberNCode.TabIndex = 7;
+            // 
+            // btn_Search
+            // 
+            this.btn_Search.Location = new System.Drawing.Point(51, 128);
+            this.btn_Search.Name = "btn_Search";
+            this.btn_Search.Size = new System.Drawing.Size(255, 57);
+            this.btn_Search.TabIndex = 11;
+            this.btn_Search.Text = "جستجو";
+            this.btn_Search.UseVisualStyleBackColor = true;
+            this.btn_Search.Click += new System.EventHandler(this.btn_Search_Click);
+            // 
+            // lbl_SearchMemberFirstName
+            // 
+            this.lbl_SearchMemberFirstName.AutoSize = true;
+            this.lbl_SearchMemberFirstName.Location = new System.Drawing.Point(244, 44);
+            this.lbl_SearchMemberFirstName.Name = "lbl_SearchMemberFirstName";
+            this.lbl_SearchMemberFirstName.Size = new System.Drawing.Size(19, 17);
+            this.lbl_SearchMemberFirstName.TabIndex = 0;
+            this.lbl_SearchMemberFirstName.Text = "نام";
+            // 
+            // txt_SearchMemberBrithDate
+            // 
+            this.txt_SearchMemberBrithDate.Location = new System.Drawing.Point(51, 99);
+            this.txt_SearchMemberBrithDate.Miladi = new System.DateTime(((long)(0)));
+            this.txt_SearchMemberBrithDate.Name = "txt_SearchMemberBrithDate";
+            this.txt_SearchMemberBrithDate.NowDateSelected = false;
+            this.txt_SearchMemberBrithDate.ReadOnly = true;
+            this.txt_SearchMemberBrithDate.SelectedDate = null;
+            this.txt_SearchMemberBrithDate.Shamsi = null;
+            this.txt_SearchMemberBrithDate.Size = new System.Drawing.Size(186, 23);
+            this.txt_SearchMemberBrithDate.TabIndex = 10;
+            // 
+            // lbl_SearchMemberLastName
+            // 
+            this.lbl_SearchMemberLastName.AutoSize = true;
+            this.lbl_SearchMemberLastName.Location = new System.Drawing.Point(244, 73);
+            this.lbl_SearchMemberLastName.Name = "lbl_SearchMemberLastName";
+            this.lbl_SearchMemberLastName.Size = new System.Drawing.Size(65, 17);
+            this.lbl_SearchMemberLastName.TabIndex = 0;
+            this.lbl_SearchMemberLastName.Text = "نام خانوادگی";
+            // 
+            // txt_SearchMemberLastName
+            // 
+            this.txt_SearchMemberLastName.Location = new System.Drawing.Point(51, 70);
+            this.txt_SearchMemberLastName.Name = "txt_SearchMemberLastName";
+            this.txt_SearchMemberLastName.Size = new System.Drawing.Size(186, 23);
+            this.txt_SearchMemberLastName.TabIndex = 9;
+            // 
+            // lbl_SearchMemberBrithDate
+            // 
+            this.lbl_SearchMemberBrithDate.AutoSize = true;
+            this.lbl_SearchMemberBrithDate.Location = new System.Drawing.Point(244, 102);
+            this.lbl_SearchMemberBrithDate.Name = "lbl_SearchMemberBrithDate";
+            this.lbl_SearchMemberBrithDate.Size = new System.Drawing.Size(53, 17);
+            this.lbl_SearchMemberBrithDate.TabIndex = 0;
+            this.lbl_SearchMemberBrithDate.Text = "تاریخ تولد";
+            // 
+            // txt_SearchMemberFirstName
+            // 
+            this.txt_SearchMemberFirstName.Location = new System.Drawing.Point(51, 41);
+            this.txt_SearchMemberFirstName.Name = "txt_SearchMemberFirstName";
+            this.txt_SearchMemberFirstName.Size = new System.Drawing.Size(186, 23);
+            this.txt_SearchMemberFirstName.TabIndex = 8;
+            // 
+            // lbl_SearchMemberNCode
+            // 
+            this.lbl_SearchMemberNCode.AutoSize = true;
+            this.lbl_SearchMemberNCode.Location = new System.Drawing.Point(244, 15);
+            this.lbl_SearchMemberNCode.Name = "lbl_SearchMemberNCode";
+            this.lbl_SearchMemberNCode.Size = new System.Drawing.Size(35, 17);
+            this.lbl_SearchMemberNCode.TabIndex = 0;
+            this.lbl_SearchMemberNCode.Text = "کدملی";
             // 
             // lbl_NewMember
             // 
@@ -131,170 +301,11 @@
             this.lbl_SearchMember.TabIndex = 2;
             this.lbl_SearchMember.Text = "جستجو";
             // 
-            // lbl_NewMemberFirstName
+            // col_MemberID
             // 
-            this.lbl_NewMemberFirstName.AutoSize = true;
-            this.lbl_NewMemberFirstName.Location = new System.Drawing.Point(231, 41);
-            this.lbl_NewMemberFirstName.Name = "lbl_NewMemberFirstName";
-            this.lbl_NewMemberFirstName.Size = new System.Drawing.Size(19, 17);
-            this.lbl_NewMemberFirstName.TabIndex = 0;
-            this.lbl_NewMemberFirstName.Text = "نام";
-            // 
-            // lbl_NewMemberNCode
-            // 
-            this.lbl_NewMemberNCode.AutoSize = true;
-            this.lbl_NewMemberNCode.Location = new System.Drawing.Point(231, 12);
-            this.lbl_NewMemberNCode.Name = "lbl_NewMemberNCode";
-            this.lbl_NewMemberNCode.Size = new System.Drawing.Size(35, 17);
-            this.lbl_NewMemberNCode.TabIndex = 0;
-            this.lbl_NewMemberNCode.Text = "کدملی";
-            // 
-            // lbl_NewMemberLastName
-            // 
-            this.lbl_NewMemberLastName.AutoSize = true;
-            this.lbl_NewMemberLastName.Location = new System.Drawing.Point(231, 70);
-            this.lbl_NewMemberLastName.Name = "lbl_NewMemberLastName";
-            this.lbl_NewMemberLastName.Size = new System.Drawing.Size(65, 17);
-            this.lbl_NewMemberLastName.TabIndex = 0;
-            this.lbl_NewMemberLastName.Text = "نام خانوادگی";
-            // 
-            // lbl_NewMemberBrithDate
-            // 
-            this.lbl_NewMemberBrithDate.AutoSize = true;
-            this.lbl_NewMemberBrithDate.Location = new System.Drawing.Point(231, 99);
-            this.lbl_NewMemberBrithDate.Name = "lbl_NewMemberBrithDate";
-            this.lbl_NewMemberBrithDate.Size = new System.Drawing.Size(53, 17);
-            this.lbl_NewMemberBrithDate.TabIndex = 0;
-            this.lbl_NewMemberBrithDate.Text = "تاریخ تولد";
-            // 
-            // txt_NewMemberNCode
-            // 
-            this.txt_NewMemberNCode.Location = new System.Drawing.Point(38, 9);
-            this.txt_NewMemberNCode.Name = "txt_NewMemberNCode";
-            this.txt_NewMemberNCode.Size = new System.Drawing.Size(186, 23);
-            this.txt_NewMemberNCode.TabIndex = 1;
-            // 
-            // txt_NewMemberFirstName
-            // 
-            this.txt_NewMemberFirstName.Location = new System.Drawing.Point(38, 38);
-            this.txt_NewMemberFirstName.Name = "txt_NewMemberFirstName";
-            this.txt_NewMemberFirstName.Size = new System.Drawing.Size(186, 23);
-            this.txt_NewMemberFirstName.TabIndex = 2;
-            // 
-            // txt_NewMemberLastName
-            // 
-            this.txt_NewMemberLastName.Location = new System.Drawing.Point(38, 67);
-            this.txt_NewMemberLastName.Name = "txt_NewMemberLastName";
-            this.txt_NewMemberLastName.Size = new System.Drawing.Size(186, 23);
-            this.txt_NewMemberLastName.TabIndex = 3;
-            // 
-            // txt_NewMemberBrithDate
-            // 
-            this.txt_NewMemberBrithDate.Location = new System.Drawing.Point(38, 96);
-            this.txt_NewMemberBrithDate.Miladi = new System.DateTime(((long)(0)));
-            this.txt_NewMemberBrithDate.Name = "txt_NewMemberBrithDate";
-            this.txt_NewMemberBrithDate.NowDateSelected = false;
-            this.txt_NewMemberBrithDate.ReadOnly = true;
-            this.txt_NewMemberBrithDate.SelectedDate = null;
-            this.txt_NewMemberBrithDate.Shamsi = null;
-            this.txt_NewMemberBrithDate.Size = new System.Drawing.Size(186, 23);
-            this.txt_NewMemberBrithDate.TabIndex = 4;
-            // 
-            // btn_AddNewMember
-            // 
-            this.btn_AddNewMember.Location = new System.Drawing.Point(38, 125);
-            this.btn_AddNewMember.Name = "btn_AddNewMember";
-            this.btn_AddNewMember.Size = new System.Drawing.Size(255, 27);
-            this.btn_AddNewMember.TabIndex = 5;
-            this.btn_AddNewMember.Text = "افزودن";
-            this.btn_AddNewMember.UseVisualStyleBackColor = true;
-            // 
-            // btn_Clear
-            // 
-            this.btn_Clear.Location = new System.Drawing.Point(38, 158);
-            this.btn_Clear.Name = "btn_Clear";
-            this.btn_Clear.Size = new System.Drawing.Size(255, 27);
-            this.btn_Clear.TabIndex = 6;
-            this.btn_Clear.Text = "انصراف";
-            this.btn_Clear.UseVisualStyleBackColor = true;
-            // 
-            // lbl_SearchMemberFirstName
-            // 
-            this.lbl_SearchMemberFirstName.AutoSize = true;
-            this.lbl_SearchMemberFirstName.Location = new System.Drawing.Point(244, 44);
-            this.lbl_SearchMemberFirstName.Name = "lbl_SearchMemberFirstName";
-            this.lbl_SearchMemberFirstName.Size = new System.Drawing.Size(19, 17);
-            this.lbl_SearchMemberFirstName.TabIndex = 0;
-            this.lbl_SearchMemberFirstName.Text = "نام";
-            // 
-            // lbl_SearchMemberLastName
-            // 
-            this.lbl_SearchMemberLastName.AutoSize = true;
-            this.lbl_SearchMemberLastName.Location = new System.Drawing.Point(244, 73);
-            this.lbl_SearchMemberLastName.Name = "lbl_SearchMemberLastName";
-            this.lbl_SearchMemberLastName.Size = new System.Drawing.Size(65, 17);
-            this.lbl_SearchMemberLastName.TabIndex = 0;
-            this.lbl_SearchMemberLastName.Text = "نام خانوادگی";
-            // 
-            // lbl_SearchMemberBrithDate
-            // 
-            this.lbl_SearchMemberBrithDate.AutoSize = true;
-            this.lbl_SearchMemberBrithDate.Location = new System.Drawing.Point(244, 102);
-            this.lbl_SearchMemberBrithDate.Name = "lbl_SearchMemberBrithDate";
-            this.lbl_SearchMemberBrithDate.Size = new System.Drawing.Size(53, 17);
-            this.lbl_SearchMemberBrithDate.TabIndex = 0;
-            this.lbl_SearchMemberBrithDate.Text = "تاریخ تولد";
-            // 
-            // lbl_SearchMemberNCode
-            // 
-            this.lbl_SearchMemberNCode.AutoSize = true;
-            this.lbl_SearchMemberNCode.Location = new System.Drawing.Point(244, 15);
-            this.lbl_SearchMemberNCode.Name = "lbl_SearchMemberNCode";
-            this.lbl_SearchMemberNCode.Size = new System.Drawing.Size(35, 17);
-            this.lbl_SearchMemberNCode.TabIndex = 0;
-            this.lbl_SearchMemberNCode.Text = "کدملی";
-            // 
-            // txt_SearchMemberNCode
-            // 
-            this.txt_SearchMemberNCode.Location = new System.Drawing.Point(51, 12);
-            this.txt_SearchMemberNCode.Name = "txt_SearchMemberNCode";
-            this.txt_SearchMemberNCode.Size = new System.Drawing.Size(186, 23);
-            this.txt_SearchMemberNCode.TabIndex = 7;
-            // 
-            // txt_SearchMemberFirstName
-            // 
-            this.txt_SearchMemberFirstName.Location = new System.Drawing.Point(51, 41);
-            this.txt_SearchMemberFirstName.Name = "txt_SearchMemberFirstName";
-            this.txt_SearchMemberFirstName.Size = new System.Drawing.Size(186, 23);
-            this.txt_SearchMemberFirstName.TabIndex = 8;
-            // 
-            // txt_SearchMemberLastName
-            // 
-            this.txt_SearchMemberLastName.Location = new System.Drawing.Point(51, 70);
-            this.txt_SearchMemberLastName.Name = "txt_SearchMemberLastName";
-            this.txt_SearchMemberLastName.Size = new System.Drawing.Size(186, 23);
-            this.txt_SearchMemberLastName.TabIndex = 9;
-            // 
-            // txt_SearchMemberBrithDate
-            // 
-            this.txt_SearchMemberBrithDate.Location = new System.Drawing.Point(51, 99);
-            this.txt_SearchMemberBrithDate.Miladi = new System.DateTime(((long)(0)));
-            this.txt_SearchMemberBrithDate.Name = "txt_SearchMemberBrithDate";
-            this.txt_SearchMemberBrithDate.NowDateSelected = false;
-            this.txt_SearchMemberBrithDate.ReadOnly = true;
-            this.txt_SearchMemberBrithDate.SelectedDate = null;
-            this.txt_SearchMemberBrithDate.Shamsi = null;
-            this.txt_SearchMemberBrithDate.Size = new System.Drawing.Size(186, 23);
-            this.txt_SearchMemberBrithDate.TabIndex = 10;
-            // 
-            // btn_Search
-            // 
-            this.btn_Search.Location = new System.Drawing.Point(51, 128);
-            this.btn_Search.Name = "btn_Search";
-            this.btn_Search.Size = new System.Drawing.Size(255, 57);
-            this.btn_Search.TabIndex = 11;
-            this.btn_Search.Text = "جستجو";
-            this.btn_Search.UseVisualStyleBackColor = true;
+            this.col_MemberID.HeaderText = "MemberID";
+            this.col_MemberID.Name = "col_MemberID";
+            this.col_MemberID.Visible = false;
             // 
             // col_NCode
             // 
@@ -331,7 +342,7 @@
             this.Controls.Add(this.pnl_NewMember);
             this.Controls.Add(this.dgv_Members);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(714, 519);
             this.MinimumSize = new System.Drawing.Size(714, 519);
@@ -339,6 +350,7 @@
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "اعضاء";
+            this.Load += new System.EventHandler(this.frmMembers_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Members)).EndInit();
             this.pnl_NewMember.ResumeLayout(false);
             this.pnl_NewMember.PerformLayout();
@@ -375,6 +387,7 @@
         private System.Windows.Forms.TextBox txt_SearchMemberFirstName;
         private System.Windows.Forms.Label lbl_SearchMemberNCode;
         private System.Windows.Forms.Button btn_Search;
+        private System.Windows.Forms.DataGridViewTextBoxColumn col_MemberID;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_NCode;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_FirstName;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_LastName;

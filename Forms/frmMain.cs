@@ -36,7 +36,8 @@ namespace libraryManagement
 
         private void timer_Tick(object sender, EventArgs e)
         {
-            val_Time.Text = pCal.GetHour(DateTime.Now) + ":" + pCal.GetMinute(DateTime.Now) + ":" + pCal.GetSecond(DateTime.Now);
+            string t = pCal.GetHour(DateTime.Now) + ":" + pCal.GetMinute(DateTime.Now) + ":" + pCal.GetSecond(DateTime.Now);
+            val_Time.Text = string.Format("{0:HH:MM:ss}", Convert.ToDateTime(t));
         }
 
         private void btn_Library_Click(object sender, EventArgs e)
