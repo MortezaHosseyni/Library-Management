@@ -29,9 +29,6 @@
         private void InitializeComponent()
         {
             this.dgv_Books = new System.Windows.Forms.DataGridView();
-            this.col_BookID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.col_BookCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.col_BookName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pnl_SearchBook = new System.Windows.Forms.Panel();
             this.txt_SearchBookCode = new System.Windows.Forms.TextBox();
             this.btn_Search = new System.Windows.Forms.Button();
@@ -47,6 +44,9 @@
             this.txt_NewBookName = new System.Windows.Forms.TextBox();
             this.txt_NewBookCode = new System.Windows.Forms.TextBox();
             this.lbl_SearchBook = new System.Windows.Forms.Label();
+            this.col_BookID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col_BookName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col_BookCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Books)).BeginInit();
             this.pnl_SearchBook.SuspendLayout();
             this.pnl_NewBook.SuspendLayout();
@@ -59,31 +59,13 @@
             this.dgv_Books.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_Books.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.col_BookID,
-            this.col_BookCode,
-            this.col_BookName});
+            this.col_BookName,
+            this.col_BookCode});
             this.dgv_Books.Location = new System.Drawing.Point(283, 13);
             this.dgv_Books.Margin = new System.Windows.Forms.Padding(4);
             this.dgv_Books.Name = "dgv_Books";
             this.dgv_Books.Size = new System.Drawing.Size(300, 308);
             this.dgv_Books.TabIndex = 0;
-            // 
-            // col_BookID
-            // 
-            this.col_BookID.HeaderText = "BookID";
-            this.col_BookID.Name = "col_BookID";
-            this.col_BookID.Visible = false;
-            // 
-            // col_BookCode
-            // 
-            this.col_BookCode.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.col_BookCode.HeaderText = "کد کتاب";
-            this.col_BookCode.Name = "col_BookCode";
-            // 
-            // col_BookName
-            // 
-            this.col_BookName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.col_BookName.HeaderText = "نام کتاب";
-            this.col_BookName.Name = "col_BookName";
             // 
             // pnl_SearchBook
             // 
@@ -113,6 +95,7 @@
             this.btn_Search.TabIndex = 7;
             this.btn_Search.Text = "جستجو";
             this.btn_Search.UseVisualStyleBackColor = true;
+            this.btn_Search.Click += new System.EventHandler(this.btn_Search_Click);
             // 
             // txt_SearchBookName
             // 
@@ -172,6 +155,7 @@
             this.btn_Clear.TabIndex = 4;
             this.btn_Clear.Text = "انصراف";
             this.btn_Clear.UseVisualStyleBackColor = true;
+            this.btn_Clear.Click += new System.EventHandler(this.btn_Clear_Click);
             // 
             // btn_AddBook
             // 
@@ -181,6 +165,7 @@
             this.btn_AddBook.TabIndex = 3;
             this.btn_AddBook.Text = "افزودن";
             this.btn_AddBook.UseVisualStyleBackColor = true;
+            this.btn_AddBook.Click += new System.EventHandler(this.btn_AddBook_Click);
             // 
             // lbl_NewBookName
             // 
@@ -225,6 +210,24 @@
             this.lbl_SearchBook.TabIndex = 0;
             this.lbl_SearchBook.Text = "جستجو";
             // 
+            // col_BookID
+            // 
+            this.col_BookID.HeaderText = "BookID";
+            this.col_BookID.Name = "col_BookID";
+            this.col_BookID.Visible = false;
+            // 
+            // col_BookName
+            // 
+            this.col_BookName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.col_BookName.HeaderText = "نام کتاب";
+            this.col_BookName.Name = "col_BookName";
+            // 
+            // col_BookCode
+            // 
+            this.col_BookCode.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.col_BookCode.HeaderText = "کد کتاب";
+            this.col_BookCode.Name = "col_BookCode";
+            // 
             // frmLibrary
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -244,6 +247,7 @@
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "کتابخانه";
+            this.Load += new System.EventHandler(this.frmLibrary_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Books)).EndInit();
             this.pnl_SearchBook.ResumeLayout(false);
             this.pnl_SearchBook.PerformLayout();
@@ -273,7 +277,7 @@
         private System.Windows.Forms.Label lbl_SearchBookName;
         private System.Windows.Forms.Label lbl_SearchBookCode;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_BookID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn col_BookCode;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_BookName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn col_BookCode;
     }
 }
