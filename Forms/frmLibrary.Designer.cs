@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.dgv_Books = new System.Windows.Forms.DataGridView();
             this.pnl_SearchBook = new System.Windows.Forms.Panel();
             this.txt_SearchBookCode = new System.Windows.Forms.TextBox();
@@ -47,9 +48,12 @@
             this.col_BookID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_BookName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_BookCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.contextMenuStrip = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.tsm_DeleteBook = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Books)).BeginInit();
             this.pnl_SearchBook.SuspendLayout();
             this.pnl_NewBook.SuspendLayout();
+            this.contextMenuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
             // dgv_Books
@@ -61,6 +65,7 @@
             this.col_BookID,
             this.col_BookName,
             this.col_BookCode});
+            this.dgv_Books.ContextMenuStrip = this.contextMenuStrip;
             this.dgv_Books.Location = new System.Drawing.Point(283, 13);
             this.dgv_Books.Margin = new System.Windows.Forms.Padding(4);
             this.dgv_Books.Name = "dgv_Books";
@@ -228,6 +233,22 @@
             this.col_BookCode.HeaderText = "کد کتاب";
             this.col_BookCode.Name = "col_BookCode";
             // 
+            // contextMenuStrip
+            // 
+            this.contextMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsm_DeleteBook});
+            this.contextMenuStrip.Name = "contextMenuStrip";
+            this.contextMenuStrip.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.contextMenuStrip.Size = new System.Drawing.Size(153, 48);
+            // 
+            // tsm_DeleteBook
+            // 
+            this.tsm_DeleteBook.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.tsm_DeleteBook.Name = "tsm_DeleteBook";
+            this.tsm_DeleteBook.Size = new System.Drawing.Size(152, 22);
+            this.tsm_DeleteBook.Text = "حذف کتاب";
+            this.tsm_DeleteBook.Click += new System.EventHandler(this.tsm_DeleteBook_Click);
+            // 
             // frmLibrary
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -253,6 +274,7 @@
             this.pnl_SearchBook.PerformLayout();
             this.pnl_NewBook.ResumeLayout(false);
             this.pnl_NewBook.PerformLayout();
+            this.contextMenuStrip.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -279,5 +301,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn col_BookID;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_BookName;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_BookCode;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip;
+        private System.Windows.Forms.ToolStripMenuItem tsm_DeleteBook;
     }
 }

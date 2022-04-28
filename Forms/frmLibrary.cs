@@ -39,10 +39,6 @@ namespace libraryManagement.Forms
             ReadData(sqlite_conn, dgv_Books, searchContidion);
         }
 
-
-
-
-
         public void InsertData(SQLiteConnection conn, string bookName, string bookCode)
         {
             try
@@ -61,8 +57,7 @@ namespace libraryManagement.Forms
                 return;
             }
         }
-
-
+        
 
         public void ReadData(SQLiteConnection conn, DataGridView VV, string search)
         {
@@ -144,6 +139,39 @@ namespace libraryManagement.Forms
             else
             {
                 MessageBox.Show("لطفا یکی از فیلدهارا پر کنید", "فیلد خالی");
+                return;
+            }
+        }
+
+        private void tsm_DeleteBook_Click(object sender, EventArgs e)
+        {
+            int bkID = Convert.ToInt32(dgv_Books.CurrentRow.Cells["col_BookID"].Value);
+            string bkName = dgv_Books.CurrentRow.Cells["col_BookName"].Value.ToString();
+
+            if (MessageBox.Show($"آیا از حذف کتاب {bkName} مطمعن هستید؟", "حدف کتاب", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                SQLiteConnection sqlite_conn;
+                sqlite_conn = db.CreateConnection();
+                DeleteBook(sqlite_conn, bkID);
+            }
+        }
+
+        public void DeleteBook(SQLiteConnection conn, int bookID)
+        {
+            try
+            {
+                SQLiteDataReader sqlite_datareader;
+                SQLiteCommand sqlite_cmd;
+
+                sqlite_cmd = conn.CreateCommand();
+                sqlite_cmd.CommandText = $"DELETE FROM TB_Books WHERE BK_ID = {bookID}";
+                sqlite_datareader = sqlite_cmd.ExecuteReader();
+
+                read();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("خطایی در خواندن اطلاعات داده رخ داد", "پایگاه داده");
                 return;
             }
         }
