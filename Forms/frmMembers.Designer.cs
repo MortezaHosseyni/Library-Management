@@ -58,9 +58,12 @@
             this.col_FirstName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_LastName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_BrithDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.contextMenuStrip = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.tsm_DeleteMember = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Members)).BeginInit();
             this.pnl_NewMember.SuspendLayout();
             this.pnl_SearchMember.SuspendLayout();
+            this.contextMenuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
             // dgv_Members
@@ -74,6 +77,7 @@
             this.col_FirstName,
             this.col_LastName,
             this.col_BrithDate});
+            this.dgv_Members.ContextMenuStrip = this.contextMenuStrip;
             this.dgv_Members.Location = new System.Drawing.Point(16, 15);
             this.dgv_Members.Margin = new System.Windows.Forms.Padding(4);
             this.dgv_Members.Name = "dgv_Members";
@@ -331,6 +335,22 @@
             this.col_BrithDate.HeaderText = "تاریخ تولد";
             this.col_BrithDate.Name = "col_BrithDate";
             // 
+            // contextMenuStrip
+            // 
+            this.contextMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsm_DeleteMember});
+            this.contextMenuStrip.Name = "contextMenuStrip";
+            this.contextMenuStrip.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.contextMenuStrip.Size = new System.Drawing.Size(153, 48);
+            // 
+            // tsm_DeleteMember
+            // 
+            this.tsm_DeleteMember.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.tsm_DeleteMember.Name = "tsm_DeleteMember";
+            this.tsm_DeleteMember.Size = new System.Drawing.Size(152, 22);
+            this.tsm_DeleteMember.Text = "حذف عضو";
+            this.tsm_DeleteMember.Click += new System.EventHandler(this.tsm_DeleteMember_Click);
+            // 
             // frmMembers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -356,6 +376,7 @@
             this.pnl_NewMember.PerformLayout();
             this.pnl_SearchMember.ResumeLayout(false);
             this.pnl_SearchMember.PerformLayout();
+            this.contextMenuStrip.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -392,5 +413,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn col_FirstName;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_LastName;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_BrithDate;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip;
+        private System.Windows.Forms.ToolStripMenuItem tsm_DeleteMember;
     }
 }

@@ -27,23 +27,60 @@ namespace libraryManagement.Forms
 
         private void btn_AddNewMember_Click(object sender, EventArgs e)
         {
+            if (txt_NewMemberNCode.Text.Trim() == "" || txt_NewMemberFirstName.Text.Trim() == "" || txt_NewMemberLastName.Text.Trim() == "" || txt_NewMemberBrithDate.Text.Trim() == "")
+            {
+                MessageBox.Show("لطفا فیلدهای خالی را بررسی کنید", "فیلد خالی");
+                return;
+            }
+            else
+            {
+                SQLiteConnection sqlite_conn;
+                sqlite_conn = db.CreateConnection();
+                InsertData(sqlite_conn, txt_NewMemberNCode.Text.Trim(), txt_NewMemberFirstName.Text.Trim(), txt_NewMemberLastName.Text.Trim(), txt_NewMemberBrithDate.Text.Trim());
 
+                read();
+                clear();
+            }
         }
 
         private void btn_Clear_Click(object sender, EventArgs e)
         {
-
+            clear();
         }
 
         private void btn_Search_Click(object sender, EventArgs e)
         {
+            readSearch($"MM_NCode LIKE '%{txt_SearchMemberNCode.Text.Trim()}%' AND MM_FirstName LIKE '%{txt_SearchMemberFirstName.Text.Trim()}%' AND MM_LastName LIKE '%{txt_SearchMemberLastName.Text.Trim()}%' AND MM_BrithDate LIKE '%{txt_SearchMemberBrithDate.Text.Trim()}%'");
+        }
 
+        private void tsm_DeleteMember_Click(object sender, EventArgs e)
+        {
+            int memID = Convert.ToInt32(dgv_Members.CurrentRow.Cells["col_MemberID"].Value);
+            string memName = dgv_Members.CurrentRow.Cells["col_FirstName"].Value.ToString() + " " + dgv_Members.CurrentRow.Cells["col_LastName"].Value.ToString();
+
+            if (MessageBox.Show($"آیا از حذف {memName} مطمعن هستید؟", "حذف عضو", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                SQLiteConnection sqlite_conn;
+                sqlite_conn = db.CreateConnection();
+                DeleteBook(sqlite_conn, memID);
+            }
         }
 
 
 
 
 
+
+
+
+
+        public void clear()
+        {
+            txt_NewMemberNCode.Text = "";
+            txt_NewMemberFirstName.Text = "";
+            txt_NewMemberLastName.Text = "";
+            txt_NewMemberBrithDate.Text = "";
+        }
 
 
         public void read()
@@ -96,16 +133,16 @@ namespace libraryManagement.Forms
             conn.Close();
         }
 
-        public void InsertData(SQLiteConnection conn, string bookName, string bookCode)
+        public void InsertData(SQLiteConnection conn, string memNCode, string memFirstName, string memLastName, string memBrithDate)
         {
             try
             {
                 SQLiteCommand sqlite_cmd;
                 sqlite_cmd = conn.CreateCommand();
-                sqlite_cmd.CommandText = $"INSERT INTO TB_Books (BK_Name, BK_Code) VALUES('{bookName}', '{bookCode}'); ";
+                sqlite_cmd.CommandText = $"INSERT INTO TB_Members (MM_NCode, MM_FirstName, MM_LastName, MM_BrithDate) VALUES('{memNCode}', '{memFirstName}', '{memLastName}', '{memBrithDate}'); ";
                 sqlite_cmd.ExecuteNonQuery();
 
-                MessageBox.Show("کتاب ذخیره شد", "پایگاه داده");
+                MessageBox.Show("عضو جدید با موفقیت ثبت شد", "پایگاه داده");
                 return;
             }
             catch (Exception)
@@ -115,7 +152,7 @@ namespace libraryManagement.Forms
             }
         }
 
-        public void DeleteBook(SQLiteConnection conn, int bookID)
+        public void DeleteBook(SQLiteConnection conn, int memberID)
         {
             try
             {
@@ -123,7 +160,7 @@ namespace libraryManagement.Forms
                 SQLiteCommand sqlite_cmd;
 
                 sqlite_cmd = conn.CreateCommand();
-                sqlite_cmd.CommandText = $"DELETE FROM TB_Books WHERE BK_ID = {bookID}";
+                sqlite_cmd.CommandText = $"DELETE FROM TB_Members WHERE MM_ID = {memberID}";
                 sqlite_datareader = sqlite_cmd.ExecuteReader();
 
                 read();
@@ -134,5 +171,7 @@ namespace libraryManagement.Forms
                 return;
             }
         }
+
+        
     }
 }
