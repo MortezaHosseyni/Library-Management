@@ -44,6 +44,9 @@
             this.lbl_SearchBookCode = new System.Windows.Forms.Label();
             this.lbl_SearchBookName = new System.Windows.Forms.Label();
             this.btn_Search = new System.Windows.Forms.Button();
+            this.col_BookID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col_BookCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col_BookName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Books)).BeginInit();
             this.pnl_SearchBook.SuspendLayout();
             this.pnl_NewBook.SuspendLayout();
@@ -51,7 +54,13 @@
             // 
             // dgv_Books
             // 
+            this.dgv_Books.AllowUserToAddRows = false;
+            this.dgv_Books.AllowUserToDeleteRows = false;
             this.dgv_Books.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_Books.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.col_BookID,
+            this.col_BookCode,
+            this.col_BookName});
             this.dgv_Books.Location = new System.Drawing.Point(283, 13);
             this.dgv_Books.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgv_Books.Name = "dgv_Books";
@@ -198,6 +207,24 @@
             this.btn_Search.Text = "جستجو";
             this.btn_Search.UseVisualStyleBackColor = true;
             // 
+            // col_BookID
+            // 
+            this.col_BookID.HeaderText = "BookID";
+            this.col_BookID.Name = "col_BookID";
+            this.col_BookID.Visible = false;
+            // 
+            // col_BookCode
+            // 
+            this.col_BookCode.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.col_BookCode.HeaderText = "کد کتاب";
+            this.col_BookCode.Name = "col_BookCode";
+            // 
+            // col_BookName
+            // 
+            this.col_BookName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.col_BookName.HeaderText = "نام کتاب";
+            this.col_BookName.Name = "col_BookName";
+            // 
             // frmLibrary
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -241,5 +268,8 @@
         private System.Windows.Forms.TextBox txt_SearchBookName;
         private System.Windows.Forms.Label lbl_SearchBookName;
         private System.Windows.Forms.Label lbl_SearchBookCode;
+        private System.Windows.Forms.DataGridViewTextBoxColumn col_BookID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn col_BookCode;
+        private System.Windows.Forms.DataGridViewTextBoxColumn col_BookName;
     }
 }
