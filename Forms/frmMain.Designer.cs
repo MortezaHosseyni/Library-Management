@@ -69,25 +69,25 @@
             // دربارهماToolStripMenuItem
             // 
             this.دربارهماToolStripMenuItem.Name = "دربارهماToolStripMenuItem";
-            this.دربارهماToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.دربارهماToolStripMenuItem.Size = new System.Drawing.Size(117, 22);
             this.دربارهماToolStripMenuItem.Text = "درباره ما";
             // 
             // تنظیماتToolStripMenuItem
             // 
             this.تنظیماتToolStripMenuItem.Name = "تنظیماتToolStripMenuItem";
-            this.تنظیماتToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.تنظیماتToolStripMenuItem.Size = new System.Drawing.Size(117, 22);
             this.تنظیماتToolStripMenuItem.Text = "تنظیمات";
             // 
             // خروجToolStripMenuItem
             // 
             this.خروجToolStripMenuItem.Name = "خروجToolStripMenuItem";
-            this.خروجToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.خروجToolStripMenuItem.Size = new System.Drawing.Size(117, 22);
             this.خروجToolStripMenuItem.Text = "خروج";
             // 
             // btn_Library
             // 
             this.btn_Library.Location = new System.Drawing.Point(463, 29);
-            this.btn_Library.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_Library.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Library.Name = "btn_Library";
             this.btn_Library.Size = new System.Drawing.Size(217, 62);
             this.btn_Library.TabIndex = 1;
@@ -137,7 +137,7 @@
             // lbl_Time
             // 
             this.lbl_Time.AutoSize = true;
-            this.lbl_Time.Location = new System.Drawing.Point(457, 169);
+            this.lbl_Time.Location = new System.Drawing.Point(438, 169);
             this.lbl_Time.Name = "lbl_Time";
             this.lbl_Time.Size = new System.Drawing.Size(37, 17);
             this.lbl_Time.TabIndex = 2;
@@ -148,7 +148,7 @@
             this.val_Time.AutoSize = true;
             this.val_Time.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.val_Time.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.val_Time.Location = new System.Drawing.Point(379, 169);
+            this.val_Time.Location = new System.Drawing.Point(360, 169);
             this.val_Time.Name = "val_Time";
             this.val_Time.Size = new System.Drawing.Size(72, 18);
             this.val_Time.TabIndex = 2;
@@ -191,7 +191,7 @@
             this.Controls.Add(this.mns_TopMenu);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
             this.MainMenuStrip = this.mns_TopMenu;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.Name = "frmMain";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;

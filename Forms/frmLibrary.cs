@@ -10,21 +10,11 @@ using System.Windows.Forms;
 
 namespace libraryManagement.Forms
 {
-    public partial class frmLogin : Form
+    public partial class frmLibrary : Form
     {
-        public frmLogin()
+        public frmLibrary()
         {
             InitializeComponent();
-        }
-
-        private void frmLogin_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btn_Exit_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
         }
     }
 }

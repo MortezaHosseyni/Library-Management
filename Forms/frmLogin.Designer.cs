@@ -75,7 +75,7 @@
             this.btn_Login.Location = new System.Drawing.Point(82, 170);
             this.btn_Login.Name = "btn_Login";
             this.btn_Login.Size = new System.Drawing.Size(305, 31);
-            this.btn_Login.TabIndex = 2;
+            this.btn_Login.TabIndex = 3;
             this.btn_Login.Text = "ورود";
             this.btn_Login.UseVisualStyleBackColor = true;
             // 
@@ -84,9 +84,10 @@
             this.btn_Exit.Location = new System.Drawing.Point(82, 207);
             this.btn_Exit.Name = "btn_Exit";
             this.btn_Exit.Size = new System.Drawing.Size(305, 31);
-            this.btn_Exit.TabIndex = 2;
+            this.btn_Exit.TabIndex = 4;
             this.btn_Exit.Text = "خروج";
             this.btn_Exit.UseVisualStyleBackColor = true;
+            this.btn_Exit.Click += new System.EventHandler(this.btn_Exit_Click);
             // 
             // lbl_Title
             // 
@@ -95,7 +96,7 @@
             this.lbl_Title.Location = new System.Drawing.Point(150, 24);
             this.lbl_Title.Name = "lbl_Title";
             this.lbl_Title.Size = new System.Drawing.Size(162, 25);
-            this.lbl_Title.TabIndex = 1;
+            this.lbl_Title.TabIndex = 0;
             this.lbl_Title.Text = "سیستم مدیریت کتابخانه";
             // 
             // frmLogin
@@ -118,6 +119,7 @@
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "صفحه ورود";
+            this.Load += new System.EventHandler(this.frmLogin_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
