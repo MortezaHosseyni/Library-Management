@@ -121,7 +121,7 @@
             this.txt_NewBookCode.Location = new System.Drawing.Point(19, 23);
             this.txt_NewBookCode.Name = "txt_NewBookCode";
             this.txt_NewBookCode.Size = new System.Drawing.Size(182, 23);
-            this.txt_NewBookCode.TabIndex = 0;
+            this.txt_NewBookCode.TabIndex = 1;
             // 
             // lbl_NewBookCode
             // 
@@ -137,7 +137,7 @@
             this.txt_NewBookName.Location = new System.Drawing.Point(19, 52);
             this.txt_NewBookName.Name = "txt_NewBookName";
             this.txt_NewBookName.Size = new System.Drawing.Size(182, 23);
-            this.txt_NewBookName.TabIndex = 0;
+            this.txt_NewBookName.TabIndex = 2;
             // 
             // lbl_NewBookName
             // 
@@ -153,7 +153,7 @@
             this.btn_AddBook.Location = new System.Drawing.Point(141, 90);
             this.btn_AddBook.Name = "btn_AddBook";
             this.btn_AddBook.Size = new System.Drawing.Size(108, 34);
-            this.btn_AddBook.TabIndex = 2;
+            this.btn_AddBook.TabIndex = 3;
             this.btn_AddBook.Text = "افزودن";
             this.btn_AddBook.UseVisualStyleBackColor = true;
             // 
@@ -162,7 +162,7 @@
             this.btn_Clear.Location = new System.Drawing.Point(19, 90);
             this.btn_Clear.Name = "btn_Clear";
             this.btn_Clear.Size = new System.Drawing.Size(116, 34);
-            this.btn_Clear.TabIndex = 2;
+            this.btn_Clear.TabIndex = 4;
             this.btn_Clear.Text = "انصراف";
             this.btn_Clear.UseVisualStyleBackColor = true;
             // 
@@ -171,14 +171,14 @@
             this.txt_SearchBookCode.Location = new System.Drawing.Point(19, 16);
             this.txt_SearchBookCode.Name = "txt_SearchBookCode";
             this.txt_SearchBookCode.Size = new System.Drawing.Size(182, 23);
-            this.txt_SearchBookCode.TabIndex = 0;
+            this.txt_SearchBookCode.TabIndex = 5;
             // 
             // txt_SearchBookName
             // 
             this.txt_SearchBookName.Location = new System.Drawing.Point(19, 45);
             this.txt_SearchBookName.Name = "txt_SearchBookName";
             this.txt_SearchBookName.Size = new System.Drawing.Size(182, 23);
-            this.txt_SearchBookName.TabIndex = 0;
+            this.txt_SearchBookName.TabIndex = 6;
             // 
             // lbl_SearchBookCode
             // 
@@ -203,7 +203,7 @@
             this.btn_Search.Location = new System.Drawing.Point(19, 84);
             this.btn_Search.Name = "btn_Search";
             this.btn_Search.Size = new System.Drawing.Size(230, 27);
-            this.btn_Search.TabIndex = 2;
+            this.btn_Search.TabIndex = 7;
             this.btn_Search.Text = "جستجو";
             this.btn_Search.UseVisualStyleBackColor = true;
             // 
@@ -237,6 +237,9 @@
             this.Controls.Add(this.dgv_Books);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(612, 373);
+            this.MinimumSize = new System.Drawing.Size(612, 373);
             this.Name = "frmLibrary";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.Text = "کتابخانه";
