@@ -171,11 +171,12 @@
             this.val_User.AutoSize = true;
             this.val_User.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.val_User.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.val_User.Location = new System.Drawing.Point(11, 168);
+            this.val_User.Location = new System.Drawing.Point(109, 168);
             this.val_User.Name = "val_User";
-            this.val_User.Size = new System.Drawing.Size(216, 18);
+            this.val_User.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.val_User.Size = new System.Drawing.Size(96, 18);
             this.val_User.TabIndex = 2;
-            this.val_User.Text = "نام و نام خانوادگی ادمین  وارد شده";
+            this.val_User.Text = "مرتضی حسینی";
             // 
             // timer
             // 

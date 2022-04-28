@@ -63,6 +63,7 @@ namespace libraryManagement.Forms
                     {
                         frmMain fm = new frmMain();
 
+                        fm.personelName = sqlite_datareader.GetString(2) + " " + sqlite_datareader.GetString(3);
                         fm.Show();
                         this.Hide();
 
