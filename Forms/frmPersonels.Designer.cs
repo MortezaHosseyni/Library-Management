@@ -30,6 +30,14 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dgv_Personels = new System.Windows.Forms.DataGridView();
+            this.col_PersonelID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col_NCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col_FirstName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col_LastName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col_BrithDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col_Username = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.contextMenuStrip = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.tsm_DeletePersonel = new System.Windows.Forms.ToolStripMenuItem();
             this.pnl_NewPersonel = new System.Windows.Forms.Panel();
             this.txt_NewPersonelBrithDate = new BPersianCalender.BPersianCalenderTextBox();
             this.btn_Clear = new System.Windows.Forms.Button();
@@ -59,18 +67,11 @@
             this.txt_SearchPersonelFirstName = new System.Windows.Forms.TextBox();
             this.lbl_NewPersonel = new System.Windows.Forms.Label();
             this.lbl_SearchPersonel = new System.Windows.Forms.Label();
-            this.col_PersonelID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.col_NCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.col_FirstName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.col_LastName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.col_BrithDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.col_Username = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.contextMenuStrip = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.tsm_DeletePersonel = new System.Windows.Forms.ToolStripMenuItem();
+            this.بروزرسانیگذرواژهToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Personels)).BeginInit();
+            this.contextMenuStrip.SuspendLayout();
             this.pnl_NewPersonel.SuspendLayout();
             this.pnl_SearchPersonel.SuspendLayout();
-            this.contextMenuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
             // dgv_Personels
@@ -90,6 +91,59 @@
             this.dgv_Personels.Name = "dgv_Personels";
             this.dgv_Personels.Size = new System.Drawing.Size(781, 258);
             this.dgv_Personels.TabIndex = 0;
+            // 
+            // col_PersonelID
+            // 
+            this.col_PersonelID.HeaderText = "PersonelID";
+            this.col_PersonelID.Name = "col_PersonelID";
+            this.col_PersonelID.Visible = false;
+            // 
+            // col_NCode
+            // 
+            this.col_NCode.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.col_NCode.HeaderText = "کدملی";
+            this.col_NCode.Name = "col_NCode";
+            // 
+            // col_FirstName
+            // 
+            this.col_FirstName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.col_FirstName.HeaderText = "نام";
+            this.col_FirstName.Name = "col_FirstName";
+            // 
+            // col_LastName
+            // 
+            this.col_LastName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.col_LastName.HeaderText = "نام خانوادگی";
+            this.col_LastName.Name = "col_LastName";
+            // 
+            // col_BrithDate
+            // 
+            this.col_BrithDate.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.col_BrithDate.HeaderText = "تاریخ تولد";
+            this.col_BrithDate.Name = "col_BrithDate";
+            // 
+            // col_Username
+            // 
+            this.col_Username.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.col_Username.HeaderText = "نام کاربری";
+            this.col_Username.Name = "col_Username";
+            // 
+            // contextMenuStrip
+            // 
+            this.contextMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsm_DeletePersonel,
+            this.بروزرسانیگذرواژهToolStripMenuItem});
+            this.contextMenuStrip.Name = "contextMenuStrip";
+            this.contextMenuStrip.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.contextMenuStrip.Size = new System.Drawing.Size(162, 70);
+            // 
+            // tsm_DeletePersonel
+            // 
+            this.tsm_DeletePersonel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.tsm_DeletePersonel.Name = "tsm_DeletePersonel";
+            this.tsm_DeletePersonel.Size = new System.Drawing.Size(161, 22);
+            this.tsm_DeletePersonel.Text = "حذف پرسنل";
+            this.tsm_DeletePersonel.Click += new System.EventHandler(this.tsm_DeletePersonel_Click);
             // 
             // pnl_NewPersonel
             // 
@@ -367,56 +421,12 @@
             this.lbl_SearchPersonel.TabIndex = 2;
             this.lbl_SearchPersonel.Text = "جستجو";
             // 
-            // col_PersonelID
+            // بروزرسانیگذرواژهToolStripMenuItem
             // 
-            this.col_PersonelID.HeaderText = "PersonelID";
-            this.col_PersonelID.Name = "col_PersonelID";
-            this.col_PersonelID.Visible = false;
-            // 
-            // col_NCode
-            // 
-            this.col_NCode.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.col_NCode.HeaderText = "کدملی";
-            this.col_NCode.Name = "col_NCode";
-            // 
-            // col_FirstName
-            // 
-            this.col_FirstName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.col_FirstName.HeaderText = "نام";
-            this.col_FirstName.Name = "col_FirstName";
-            // 
-            // col_LastName
-            // 
-            this.col_LastName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.col_LastName.HeaderText = "نام خانوادگی";
-            this.col_LastName.Name = "col_LastName";
-            // 
-            // col_BrithDate
-            // 
-            this.col_BrithDate.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.col_BrithDate.HeaderText = "تاریخ تولد";
-            this.col_BrithDate.Name = "col_BrithDate";
-            // 
-            // col_Username
-            // 
-            this.col_Username.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.col_Username.HeaderText = "نام کاربری";
-            this.col_Username.Name = "col_Username";
-            // 
-            // contextMenuStrip
-            // 
-            this.contextMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tsm_DeletePersonel});
-            this.contextMenuStrip.Name = "contextMenuStrip";
-            this.contextMenuStrip.Size = new System.Drawing.Size(133, 26);
-            // 
-            // tsm_DeletePersonel
-            // 
-            this.tsm_DeletePersonel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.tsm_DeletePersonel.Name = "tsm_DeletePersonel";
-            this.tsm_DeletePersonel.Size = new System.Drawing.Size(132, 22);
-            this.tsm_DeletePersonel.Text = "حذف پرسنل";
-            this.tsm_DeletePersonel.Click += new System.EventHandler(this.tsm_DeletePersonel_Click);
+            this.بروزرسانیگذرواژهToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.بروزرسانیگذرواژهToolStripMenuItem.Name = "بروزرسانیگذرواژهToolStripMenuItem";
+            this.بروزرسانیگذرواژهToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
+            this.بروزرسانیگذرواژهToolStripMenuItem.Text = "بروزرسانی گذرواژه";
             // 
             // frmPersonels
             // 
@@ -439,11 +449,11 @@
             this.Text = "پرسنل";
             this.Load += new System.EventHandler(this.frmPersonels_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Personels)).EndInit();
+            this.contextMenuStrip.ResumeLayout(false);
             this.pnl_NewPersonel.ResumeLayout(false);
             this.pnl_NewPersonel.PerformLayout();
             this.pnl_SearchPersonel.ResumeLayout(false);
             this.pnl_SearchPersonel.PerformLayout();
-            this.contextMenuStrip.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -489,5 +499,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn col_Username;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip;
         private System.Windows.Forms.ToolStripMenuItem tsm_DeletePersonel;
+        private System.Windows.Forms.ToolStripMenuItem بروزرسانیگذرواژهToolStripMenuItem;
     }
 }
