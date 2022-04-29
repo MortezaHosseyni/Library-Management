@@ -66,6 +66,20 @@ namespace libraryManagement.Forms
             }
         }
 
+        private void tsm_UpdatePassword_Click(object sender, EventArgs e)
+        {
+            int memID = Convert.ToInt32(dgv_Personels.CurrentRow.Cells["col_PersonelID"].Value);
+            string memName = dgv_Personels.CurrentRow.Cells["col_FirstName"].Value.ToString() + " " + dgv_Personels.CurrentRow.Cells["col_LastName"].Value.ToString();
+            
+            frmUpdatePassword fmUP = new frmUpdatePassword();
+            fmUP.perID = memID;
+            fmUP.perName = memName;
+            fmUP.Show();
+        }
+
+
+
+
 
 
 
@@ -176,6 +190,7 @@ namespace libraryManagement.Forms
                 MessageBox.Show("خطایی در خواندن اطلاعات داده رخ داد", "پایگاه داده");
                 return;
             }
+            conn.Close();
         }
     }
 }

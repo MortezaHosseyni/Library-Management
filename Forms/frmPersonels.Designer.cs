@@ -67,7 +67,7 @@
             this.txt_SearchPersonelFirstName = new System.Windows.Forms.TextBox();
             this.lbl_NewPersonel = new System.Windows.Forms.Label();
             this.lbl_SearchPersonel = new System.Windows.Forms.Label();
-            this.بروزرسانیگذرواژهToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsm_UpdatePassword = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Personels)).BeginInit();
             this.contextMenuStrip.SuspendLayout();
             this.pnl_NewPersonel.SuspendLayout();
@@ -132,7 +132,7 @@
             // 
             this.contextMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsm_DeletePersonel,
-            this.بروزرسانیگذرواژهToolStripMenuItem});
+            this.tsm_UpdatePassword});
             this.contextMenuStrip.Name = "contextMenuStrip";
             this.contextMenuStrip.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.contextMenuStrip.Size = new System.Drawing.Size(162, 70);
@@ -421,12 +421,13 @@
             this.lbl_SearchPersonel.TabIndex = 2;
             this.lbl_SearchPersonel.Text = "جستجو";
             // 
-            // بروزرسانیگذرواژهToolStripMenuItem
+            // tsm_UpdatePassword
             // 
-            this.بروزرسانیگذرواژهToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.بروزرسانیگذرواژهToolStripMenuItem.Name = "بروزرسانیگذرواژهToolStripMenuItem";
-            this.بروزرسانیگذرواژهToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
-            this.بروزرسانیگذرواژهToolStripMenuItem.Text = "بروزرسانی گذرواژه";
+            this.tsm_UpdatePassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.tsm_UpdatePassword.Name = "tsm_UpdatePassword";
+            this.tsm_UpdatePassword.Size = new System.Drawing.Size(161, 22);
+            this.tsm_UpdatePassword.Text = "بروزرسانی گذرواژه";
+            this.tsm_UpdatePassword.Click += new System.EventHandler(this.tsm_UpdatePassword_Click);
             // 
             // frmPersonels
             // 
@@ -499,6 +500,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn col_Username;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip;
         private System.Windows.Forms.ToolStripMenuItem tsm_DeletePersonel;
-        private System.Windows.Forms.ToolStripMenuItem بروزرسانیگذرواژهToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem tsm_UpdatePassword;
     }
 }

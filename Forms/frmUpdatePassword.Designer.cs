@@ -52,7 +52,7 @@
             // 
             this.lbl_Title.AutoSize = true;
             this.lbl_Title.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.lbl_Title.Location = new System.Drawing.Point(183, 42);
+            this.lbl_Title.Location = new System.Drawing.Point(96, 39);
             this.lbl_Title.Name = "lbl_Title";
             this.lbl_Title.Size = new System.Drawing.Size(177, 24);
             this.lbl_Title.TabIndex = 1;
@@ -111,6 +111,7 @@
             this.btn_Save.TabIndex = 4;
             this.btn_Save.Text = "ذخیره";
             this.btn_Save.UseVisualStyleBackColor = true;
+            this.btn_Save.Click += new System.EventHandler(this.btn_Save_Click);
             // 
             // btn_Cancel
             // 
@@ -120,6 +121,7 @@
             this.btn_Cancel.TabIndex = 5;
             this.btn_Cancel.Text = "لغو";
             this.btn_Cancel.UseVisualStyleBackColor = true;
+            this.btn_Cancel.Click += new System.EventHandler(this.btn_Cancel_Click);
             // 
             // frmUpdatePassword
             // 
@@ -142,6 +144,7 @@
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "بروزرسانی گذرواژه";
+            this.Load += new System.EventHandler(this.frmUpdatePassword_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
