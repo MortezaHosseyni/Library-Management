@@ -30,6 +30,13 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dgv_Members = new System.Windows.Forms.DataGridView();
+            this.col_MemberID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col_NCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col_FirstName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col_LastName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col_BrithDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.contextMenuStrip = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.tsm_DeleteMember = new System.Windows.Forms.ToolStripMenuItem();
             this.pnl_NewMember = new System.Windows.Forms.Panel();
             this.btn_Clear = new System.Windows.Forms.Button();
             this.btn_AddNewMember = new System.Windows.Forms.Button();
@@ -53,17 +60,10 @@
             this.lbl_SearchMemberNCode = new System.Windows.Forms.Label();
             this.lbl_NewMember = new System.Windows.Forms.Label();
             this.lbl_SearchMember = new System.Windows.Forms.Label();
-            this.col_MemberID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.col_NCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.col_FirstName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.col_LastName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.col_BrithDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.contextMenuStrip = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.tsm_DeleteMember = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Members)).BeginInit();
+            this.contextMenuStrip.SuspendLayout();
             this.pnl_NewMember.SuspendLayout();
             this.pnl_SearchMember.SuspendLayout();
-            this.contextMenuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
             // dgv_Members
@@ -83,6 +83,52 @@
             this.dgv_Members.Name = "dgv_Members";
             this.dgv_Members.Size = new System.Drawing.Size(669, 233);
             this.dgv_Members.TabIndex = 0;
+            // 
+            // col_MemberID
+            // 
+            this.col_MemberID.HeaderText = "MemberID";
+            this.col_MemberID.Name = "col_MemberID";
+            this.col_MemberID.Visible = false;
+            // 
+            // col_NCode
+            // 
+            this.col_NCode.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.col_NCode.HeaderText = "کدملی";
+            this.col_NCode.Name = "col_NCode";
+            // 
+            // col_FirstName
+            // 
+            this.col_FirstName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.col_FirstName.HeaderText = "نام";
+            this.col_FirstName.Name = "col_FirstName";
+            // 
+            // col_LastName
+            // 
+            this.col_LastName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.col_LastName.HeaderText = "نام خانوادگی";
+            this.col_LastName.Name = "col_LastName";
+            // 
+            // col_BrithDate
+            // 
+            this.col_BrithDate.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.col_BrithDate.HeaderText = "تاریخ تولد";
+            this.col_BrithDate.Name = "col_BrithDate";
+            // 
+            // contextMenuStrip
+            // 
+            this.contextMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsm_DeleteMember});
+            this.contextMenuStrip.Name = "contextMenuStrip";
+            this.contextMenuStrip.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.contextMenuStrip.Size = new System.Drawing.Size(153, 48);
+            // 
+            // tsm_DeleteMember
+            // 
+            this.tsm_DeleteMember.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.tsm_DeleteMember.Name = "tsm_DeleteMember";
+            this.tsm_DeleteMember.Size = new System.Drawing.Size(152, 22);
+            this.tsm_DeleteMember.Text = "حذف عضو";
+            this.tsm_DeleteMember.Click += new System.EventHandler(this.tsm_DeleteMember_Click);
             // 
             // pnl_NewMember
             // 
@@ -305,51 +351,6 @@
             this.lbl_SearchMember.TabIndex = 2;
             this.lbl_SearchMember.Text = "جستجو";
             // 
-            // col_MemberID
-            // 
-            this.col_MemberID.HeaderText = "MemberID";
-            this.col_MemberID.Name = "col_MemberID";
-            this.col_MemberID.Visible = false;
-            // 
-            // col_NCode
-            // 
-            this.col_NCode.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.col_NCode.HeaderText = "کدملی";
-            this.col_NCode.Name = "col_NCode";
-            // 
-            // col_FirstName
-            // 
-            this.col_FirstName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.col_FirstName.HeaderText = "نام";
-            this.col_FirstName.Name = "col_FirstName";
-            // 
-            // col_LastName
-            // 
-            this.col_LastName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.col_LastName.HeaderText = "نام خانوادگی";
-            this.col_LastName.Name = "col_LastName";
-            // 
-            // col_BrithDate
-            // 
-            this.col_BrithDate.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.col_BrithDate.HeaderText = "تاریخ تولد";
-            this.col_BrithDate.Name = "col_BrithDate";
-            // 
-            // contextMenuStrip
-            // 
-            this.contextMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tsm_DeleteMember});
-            this.contextMenuStrip.Name = "contextMenuStrip";
-            this.contextMenuStrip.Size = new System.Drawing.Size(128, 26);
-            // 
-            // tsm_DeleteMember
-            // 
-            this.tsm_DeleteMember.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.tsm_DeleteMember.Name = "tsm_DeleteMember";
-            this.tsm_DeleteMember.Size = new System.Drawing.Size(152, 22);
-            this.tsm_DeleteMember.Text = "حذف عضو";
-            this.tsm_DeleteMember.Click += new System.EventHandler(this.tsm_DeleteMember_Click);
-            // 
             // frmMembers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -371,11 +372,11 @@
             this.Text = "اعضاء";
             this.Load += new System.EventHandler(this.frmMembers_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Members)).EndInit();
+            this.contextMenuStrip.ResumeLayout(false);
             this.pnl_NewMember.ResumeLayout(false);
             this.pnl_NewMember.PerformLayout();
             this.pnl_SearchMember.ResumeLayout(false);
             this.pnl_SearchMember.PerformLayout();
-            this.contextMenuStrip.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
