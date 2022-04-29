@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPersonels));
             this.dgv_Personels = new System.Windows.Forms.DataGridView();
             this.col_PersonelID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_NCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -38,6 +39,7 @@
             this.col_Username = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.contextMenuStrip = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.tsm_DeletePersonel = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsm_UpdatePassword = new System.Windows.Forms.ToolStripMenuItem();
             this.pnl_NewPersonel = new System.Windows.Forms.Panel();
             this.txt_NewPersonelBrithDate = new BPersianCalender.BPersianCalenderTextBox();
             this.btn_Clear = new System.Windows.Forms.Button();
@@ -67,7 +69,6 @@
             this.txt_SearchPersonelFirstName = new System.Windows.Forms.TextBox();
             this.lbl_NewPersonel = new System.Windows.Forms.Label();
             this.lbl_SearchPersonel = new System.Windows.Forms.Label();
-            this.tsm_UpdatePassword = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Personels)).BeginInit();
             this.contextMenuStrip.SuspendLayout();
             this.pnl_NewPersonel.SuspendLayout();
@@ -135,7 +136,7 @@
             this.tsm_UpdatePassword});
             this.contextMenuStrip.Name = "contextMenuStrip";
             this.contextMenuStrip.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.contextMenuStrip.Size = new System.Drawing.Size(162, 70);
+            this.contextMenuStrip.Size = new System.Drawing.Size(162, 48);
             // 
             // tsm_DeletePersonel
             // 
@@ -144,6 +145,14 @@
             this.tsm_DeletePersonel.Size = new System.Drawing.Size(161, 22);
             this.tsm_DeletePersonel.Text = "حذف پرسنل";
             this.tsm_DeletePersonel.Click += new System.EventHandler(this.tsm_DeletePersonel_Click);
+            // 
+            // tsm_UpdatePassword
+            // 
+            this.tsm_UpdatePassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.tsm_UpdatePassword.Name = "tsm_UpdatePassword";
+            this.tsm_UpdatePassword.Size = new System.Drawing.Size(161, 22);
+            this.tsm_UpdatePassword.Text = "بروزرسانی گذرواژه";
+            this.tsm_UpdatePassword.Click += new System.EventHandler(this.tsm_UpdatePassword_Click);
             // 
             // pnl_NewPersonel
             // 
@@ -421,14 +430,6 @@
             this.lbl_SearchPersonel.TabIndex = 2;
             this.lbl_SearchPersonel.Text = "جستجو";
             // 
-            // tsm_UpdatePassword
-            // 
-            this.tsm_UpdatePassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.tsm_UpdatePassword.Name = "tsm_UpdatePassword";
-            this.tsm_UpdatePassword.Size = new System.Drawing.Size(161, 22);
-            this.tsm_UpdatePassword.Text = "بروزرسانی گذرواژه";
-            this.tsm_UpdatePassword.Click += new System.EventHandler(this.tsm_UpdatePassword_Click);
-            // 
             // frmPersonels
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -440,6 +441,7 @@
             this.Controls.Add(this.pnl_NewPersonel);
             this.Controls.Add(this.dgv_Personels);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(821, 543);

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMultiDeleteBook));
             this.txt_DeleteCodeOn = new System.Windows.Forms.TextBox();
             this.lbl_DeleteOnCode = new System.Windows.Forms.Label();
             this.lbl_DeleteToCode = new System.Windows.Forms.Label();
@@ -101,7 +102,8 @@
             this.Controls.Add(this.txt_DeleteCodeOn);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(546, 188);
             this.MinimumSize = new System.Drawing.Size(546, 188);

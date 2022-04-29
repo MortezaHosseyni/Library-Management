@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             this.mns_TopMenu = new System.Windows.Forms.MenuStrip();
             this.tsm_Program = new System.Windows.Forms.ToolStripMenuItem();
             this.tsm_About = new System.Windows.Forms.ToolStripMenuItem();
@@ -71,20 +72,20 @@
             // tsm_About
             // 
             this.tsm_About.Name = "tsm_About";
-            this.tsm_About.Size = new System.Drawing.Size(152, 22);
+            this.tsm_About.Size = new System.Drawing.Size(117, 22);
             this.tsm_About.Text = "درباره ما";
             this.tsm_About.Click += new System.EventHandler(this.tsm_About_Click);
             // 
             // tsm_Setting
             // 
             this.tsm_Setting.Name = "tsm_Setting";
-            this.tsm_Setting.Size = new System.Drawing.Size(152, 22);
+            this.tsm_Setting.Size = new System.Drawing.Size(117, 22);
             this.tsm_Setting.Text = "تنظیمات";
             // 
             // tsm_Exit
             // 
             this.tsm_Exit.Name = "tsm_Exit";
-            this.tsm_Exit.Size = new System.Drawing.Size(152, 22);
+            this.tsm_Exit.Size = new System.Drawing.Size(117, 22);
             this.tsm_Exit.Text = "خروج";
             this.tsm_Exit.Click += new System.EventHandler(this.tsm_Exit_Click);
             // 
@@ -203,6 +204,7 @@
             this.Controls.Add(this.btn_Library);
             this.Controls.Add(this.mns_TopMenu);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.mns_TopMenu;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;

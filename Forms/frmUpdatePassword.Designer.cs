@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmUpdatePassword));
             this.txt_OldPassword = new System.Windows.Forms.TextBox();
             this.lbl_Title = new System.Windows.Forms.Label();
             this.lbl_OldPassword = new System.Windows.Forms.Label();
@@ -42,7 +43,7 @@
             // txt_OldPassword
             // 
             this.txt_OldPassword.Location = new System.Drawing.Point(96, 109);
-            this.txt_OldPassword.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_OldPassword.Margin = new System.Windows.Forms.Padding(4);
             this.txt_OldPassword.Name = "txt_OldPassword";
             this.txt_OldPassword.PasswordChar = '*';
             this.txt_OldPassword.Size = new System.Drawing.Size(202, 23);
@@ -139,7 +140,8 @@
             this.Controls.Add(this.txt_OldPassword);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmUpdatePassword";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMembers));
             this.dgv_Members = new System.Windows.Forms.DataGridView();
             this.col_MemberID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_NCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -120,13 +121,13 @@
             this.tsm_DeleteMember});
             this.contextMenuStrip.Name = "contextMenuStrip";
             this.contextMenuStrip.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.contextMenuStrip.Size = new System.Drawing.Size(153, 48);
+            this.contextMenuStrip.Size = new System.Drawing.Size(128, 26);
             // 
             // tsm_DeleteMember
             // 
             this.tsm_DeleteMember.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.tsm_DeleteMember.Name = "tsm_DeleteMember";
-            this.tsm_DeleteMember.Size = new System.Drawing.Size(152, 22);
+            this.tsm_DeleteMember.Size = new System.Drawing.Size(127, 22);
             this.tsm_DeleteMember.Text = "حذف عضو";
             this.tsm_DeleteMember.Click += new System.EventHandler(this.tsm_DeleteMember_Click);
             // 
@@ -362,6 +363,7 @@
             this.Controls.Add(this.pnl_NewMember);
             this.Controls.Add(this.dgv_Members);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(714, 519);
