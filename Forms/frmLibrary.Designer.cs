@@ -257,6 +257,7 @@
             this.tsm_MultiDelete.Name = "tsm_MultiDelete";
             this.tsm_MultiDelete.Size = new System.Drawing.Size(152, 22);
             this.tsm_MultiDelete.Text = "حذف چندتایی";
+            this.tsm_MultiDelete.Click += new System.EventHandler(this.tsm_MultiDelete_Click);
             // 
             // frmLibrary
             // 

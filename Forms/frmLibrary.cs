@@ -175,5 +175,12 @@ namespace libraryManagement.Forms
                 return;
             }
         }
+
+        private void tsm_MultiDelete_Click(object sender, EventArgs e)
+        {
+            frmMultiDeleteBook fmMDB = new frmMultiDeleteBook();
+            fmMDB.ShowDialog();
+            read();
+        }
     }
 }

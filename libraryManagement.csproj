@@ -104,6 +104,12 @@
     <Compile Include="Forms\frmMembers.Designer.cs">
       <DependentUpon>frmMembers.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\frmMultiDeleteBook.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmMultiDeleteBook.Designer.cs">
+      <DependentUpon>frmMultiDeleteBook.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\frmPersonels.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -129,6 +135,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmMembers.resx">
       <DependentUpon>frmMembers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmMultiDeleteBook.resx">
+      <DependentUpon>frmMultiDeleteBook.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmPersonels.resx">
       <DependentUpon>frmPersonels.cs</DependentUpon>

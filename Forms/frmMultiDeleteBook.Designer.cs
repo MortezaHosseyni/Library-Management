@@ -41,7 +41,7 @@
             this.txt_DeleteCodeOn.Location = new System.Drawing.Point(255, 39);
             this.txt_DeleteCodeOn.Name = "txt_DeleteCodeOn";
             this.txt_DeleteCodeOn.Size = new System.Drawing.Size(183, 23);
-            this.txt_DeleteCodeOn.TabIndex = 0;
+            this.txt_DeleteCodeOn.TabIndex = 1;
             // 
             // lbl_DeleteOnCode
             // 
@@ -66,14 +66,14 @@
             this.txt_DeleteCodeTo.Location = new System.Drawing.Point(31, 39);
             this.txt_DeleteCodeTo.Name = "txt_DeleteCodeTo";
             this.txt_DeleteCodeTo.Size = new System.Drawing.Size(183, 23);
-            this.txt_DeleteCodeTo.TabIndex = 0;
+            this.txt_DeleteCodeTo.TabIndex = 2;
             // 
             // btn_Delete
             // 
             this.btn_Delete.Location = new System.Drawing.Point(286, 89);
             this.btn_Delete.Name = "btn_Delete";
             this.btn_Delete.Size = new System.Drawing.Size(183, 33);
-            this.btn_Delete.TabIndex = 2;
+            this.btn_Delete.TabIndex = 3;
             this.btn_Delete.Text = "حذف";
             this.btn_Delete.UseVisualStyleBackColor = true;
             this.btn_Delete.Click += new System.EventHandler(this.btn_Delete_Click);
@@ -83,7 +83,7 @@
             this.btn_Cancel.Location = new System.Drawing.Point(62, 89);
             this.btn_Cancel.Name = "btn_Cancel";
             this.btn_Cancel.Size = new System.Drawing.Size(183, 33);
-            this.btn_Cancel.TabIndex = 2;
+            this.btn_Cancel.TabIndex = 4;
             this.btn_Cancel.Text = "لغو";
             this.btn_Cancel.UseVisualStyleBackColor = true;
             this.btn_Cancel.Click += new System.EventHandler(this.btn_Cancel_Click);
@@ -102,6 +102,9 @@
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(546, 188);
+            this.MinimumSize = new System.Drawing.Size(546, 188);
             this.Name = "frmMultiDeleteBook";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
